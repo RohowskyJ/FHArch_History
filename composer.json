@@ -1,0 +1,30 @@
+{
+     "name" : "fharch/fharch",
+     "description" : "Monorepo für PHP-Projekt mit mehreren Modulen",
+     "type" : "project",
+     "require" : {
+          "php" : ">=8.2",
+          "ext-pdo" : "*",
+          "phpmailer/phpmailer" : "^7.0",
+          "league/plates" : "^3.6"
+     },
+     "require-dev" : {
+          "phpunit/phpunit" : "^10"
+     },
+     "autoload" : {
+          "psr-4" : {
+               "Fharch\\Core\\" : "src/Core/"
+          }
+     },
+     "autoload-dev" : {
+          "psr-4" : {
+               "Tests\\" : "tests/"
+          }
+     },
+     "scripts" : {
+          "post-install-cmd" : "echo 'Composer install abgeschlossen.'",
+          "post-update-cmd" : "echo 'Composer update abgeschlossen.'"
+     },
+     "minimum-stability" : "beta",
+     "prefer-stable" : true
+}
