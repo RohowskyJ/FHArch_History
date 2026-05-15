@@ -23,3 +23,11 @@ tests/coverage/
 # Temp
 tmp/
 cache/
+
+# Fotos
+*.jpg
+*.JPG
+*.jpeg
+*.JPEG
+*.png
+*.PNG
