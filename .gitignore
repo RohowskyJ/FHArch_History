@@ -31,3 +31,9 @@ cache/
 *.JPEG
 *.png
 *.PNG
+*.tif
+*.TIF
+*.doc
+*.DOC
+*.pdf
+*.xls
