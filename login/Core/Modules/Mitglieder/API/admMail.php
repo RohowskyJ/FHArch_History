@@ -1,0 +1,415 @@
+<?php
+?>
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PDO – fv_adm_mail (CRUD + Abfrage Mail-Liste)</title>
+<style>
+:root{
+    --bg:#0b1020;
+    --panel:#0f1730;
+    --panel2:#0c142b;
+    --ink:#eaf0ff;
+    --muted:#b9c4e6;
+    --accent:#7c5cff;
+    --accent2:#2de2e6;
+    --line:rgba(255,255,255,.10);
+    --code:#071026;
+    --good:#35d07f;
+    --warn:#ffcc66;
+    --bad:#ff4d6d;
+    --shadow: 0 24px 70px rgba(0,0,0,.45);
+}
+
+body{
+    margin:0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    background:
+    radial-gradient(1200px 800px at 15% 15%, rgba(124,92,255,.25), transparent 55%),
+    radial-gradient(900px 700px at 90% 25%, rgba(45,226,230,.18), transparent 55%),
+    radial-gradient(900px 700px at 40% 95%, rgba(255,77,109,.10), transparent 55%),
+    linear-gradient(180deg, var(--bg), #050815 60%, #040611);
+        color:var(--ink);
+        padding:32px 18px 64px;
+}
+
+.wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header{
+    display:grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 18px;
+    align-items:end;
+    margin-bottom: 18px;
+}
+
+h1{
+    font-size: clamp(22px, 3.4vw, 36px);
+    line-height: 1.1;
+    margin:0;
+    letter-spacing:-0.02em;
+}
+.sub{
+    margin:10px 0 0;
+    color:var(--muted);
+    line-height:1.5;
+    max-width: 70ch;
+    font-size: 14px;
+}
+
+.badge{
+    justify-self:end;
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    padding:10px 12px;
+    border:1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 100%;
+}
+.dot{
+    width:10px;height:10px;border-radius:50%;
+    background: radial-gradient(circle at 30% 30%, #fff, rgba(255,255,255,.0) 55%),
+        linear-gradient(135deg, var(--accent), var(--accent2));
+        box-shadow: 0 0 0 4px rgba(124,92,255,.15);
+        flex:0 0 auto;
+}
+
+main{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.panel{
+    border:1px solid var(--line);
+    background:
+    radial-gradient(900px 400px at 20% 0%, rgba(124,92,255,.12), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    border-radius: 18px;
+    overflow:hidden;
+    box-shadow: var(--shadow);
+}
+
+.panel header{
+    grid-template-columns: 1fr;
+    margin:0;
+    padding: 16px 16px 10px;
+    border-bottom:1px solid var(--line);
+    background: linear-gradient(180deg, rgba(7,16,38,.5), rgba(7,16,38,.0));
+}
+.panel h2{
+    margin:0;
+    font-size: 16px;
+    letter-spacing:.02em;
+    color: #f2f6ff;
+}
+.panel p{
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.content{
+    padding: 14px 16px 18px;
+}
+
+pre{
+    margin:0;
+    background: linear-gradient(180deg, rgba(7,16,38,.85), rgba(7,16,38,.65));
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    padding: 14px 14px;
+    overflow:auto;
+    color: #eaf0ff;
+    line-height:1.5;
+    font-size: 13px;
+}
+
+code{ font-family: inherit; }
+
+.grid2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.note{
+    margin-top: 12px;
+    padding: 12px 12px;
+    border-radius: 14px;
+    border: 1px dashed rgba(255,255,255,.18);
+    background: rgba(7,16,38,.35);
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.k{
+    color:#a8b6ff;
+}
+.s{
+    color:#7ef0c1;
+}
+.n{
+    color:#ffd17a;
+}
+.c{
+    color:#8ea0c6;
+}
+.w{
+    color:#ff86a4;
+}
+
+@media (max-width: 900px){
+    header{ grid-template-columns: 1fr; }
+    .badge{ justify-self:start; }
+    .grid2{ grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div>
+<h1>PDO-Definition: <span style="color:var(--accent2)">fv_adm_mail</span> – CRUD + Mail-Liste</h1>
+<p class="sub">
+Du willst die bisherige <code>mysqli</code>-Schleifenlogik als sichere PDO-Abfrage abbilden.
+Da die Tabelle geändert wurde, gehe ich von <strong>fv_adm_mail</strong> mit <code>be_ids</code> (Benutzer-ID)
+und <code>em_mail_grp</code> (Mail-Gruppe) aus. Die Mailadresse kommt aus <strong>fh_mitglieder</strong> über <code>mi_id</code> → <code>mi_email</code>.
+</p>
+</div>
+<div class="badge" aria-label="Hinweis">
+<span class="dot" aria-hidden="true"></span>
+<span><strong>Wichtig:</strong> Kein String-Interpolieren in SQL – immer Prepared Statements.</span>
+</div>
+</header>
+
+<main>
+<section class="panel">
+<header>
+<h2>1) PDO Connection (Beispiel) + sinnvolle Defaults</h2>
+<p>UTF-8, Exceptions, echte Prepared Statements.</p>
+</header>
+<div class="content">
+<pre><code><span class="c">// db.php</span>
+<span class="k">$dsn</span> = <span class="s">"mysql:host=localhost;dbname=DEIN_DBNAME;charset=utf8mb4"</span>;
+<span class="k">$user</span> = <span class="s">"DEIN_USER"</span>;
+<span class="k">$pass</span> = <span class="s">"DEIN_PASS"</span>;
+
+<span class="k">$pdo</span> = <span class="k">new</span> <span class="k">PDO</span>(<span class="k">$dsn</span>, <span class="k">$user</span>, <span class="k">$pass</span>, [
+    <span class="k">PDO</span>::ATTR_ERRMODE            =&gt; <span class="k">PDO</span>::ERRMODE_EXCEPTION,
+    <span class="k">PDO</span>::ATTR_DEFAULT_FETCH_MODE =&gt; <span class="k">PDO</span>::FETCH_ASSOC,
+    <span class="k">PDO</span>::ATTR_EMULATE_PREPARES   =&gt; <span class="k">false</span>,
+    ]);</code></pre>
+    
+    <div class="note">
+    Falls du noch <code>0000-00-00 00:00:00</code> in <code>em_new_at</code> nutzt:
+    besser in MySQL „strict mode“ sauber machen (NULL erlauben oder Default korrekt setzen).
+    </div>
+    </div>
+    </section>
+    
+    <section class="panel">
+    <header>
+    <h2>2) Abfrage wie in deinem Code – aber korrekt als JOIN (eine Query statt N+1)</h2>
+    <p>Liest alle aktiven Einträge einer Mail-Gruppe und liefert eine kommaseparierte Liste der E-Mail-Adressen.</p>
+    </header>
+    <div class="content">
+    <pre><code><span class="c">// Beispiel-Funktion</span>
+    <span class="k">function</span> <span class="k">getMailListByGroup</span>(<span class="k">PDO</span> <span class="k">$pdo</span>, <span class="k">string</span> <span class="k">$mail_grp</span>): <span class="k">string</span>
+    {
+        <span class="k">$sql</span> = <span class="s">"
+    SELECT m.mi_email
+    FROM fv_adm_mail am
+    INNER JOIN fh_mitglieder m
+      ON m.mi_id = am.be_ids
+    WHERE am.em_mail_grp = :grp
+      AND (am.em_active = 'a' OR am.em_active = '' OR am.em_active IS NULL)
+      AND m.mi_email IS NOT NULL
+      AND m.mi_email &lt;&gt; ''
+    ORDER BY m.mi_email
+  "</span>;
+        
+        <span class="k">$stmt</span> = <span class="k">$pdo</span>-&gt;prepare(<span class="k">$sql</span>);
+        <span class="k">$stmt</span>-&gt;execute([<span class="s">':grp'</span> =&gt; <span class="k">$mail_grp</span>]);
+        
+        <span class="k">$emails</span> = <span class="k">$stmt</span>-&gt;fetchAll(<span class="k">PDO</span>::FETCH_COLUMN);
+        
+        <span class="c">// Duplikate raus (optional)</span>
+        <span class="k">$emails</span> = array_values(array_unique(<span class="k">$emails</span>));
+        
+        <span class="k">return</span> implode(<span class="s">", "</span>, <span class="k">$emails</span>);
+    }
+    
+    <span class="c">// Nutzung</span>
+    <span class="k">$adr_list</span> = getMailListByGroup(<span class="k">$pdo</span>, <span class="k">$mail_grp</span>);</code></pre>
+    
+    <div class="note">
+    <strong>Mapping-Hinweis:</strong> In deinem alten Code war <code>em_mitgl_nr</code> der Schlüssel.
+    In der neuen Tabelle sehe ich <code>be_ids</code>. Falls der Join doch über eine andere Spalte laufen muss,
+    sag kurz, welche Spalte in <code>fv_adm_mail</code> auf <code>fh_mitglieder.mi_id</code> zeigt.
+    </div>
+    </div>
+    </section>
+    
+    <section class="panel">
+    <header>
+    <h2>3) CRUD für fv_adm_mail (PDO Prepared Statements)</h2>
+    <p>Insert / Select / Update / Delete – passend zu deinen Spalten.</p>
+    </header>
+    
+    <div class="content">
+    <div class="grid2">
+    <div>
+    <pre><code><span class="c">// CREATE</span>
+    <span class="k">$sql</span> = <span class="s">"
+  INSERT INTO fv_adm_mail (be_ids, em_mail_grp, em_active, em_new_uid, em_new_at, em_changed_id, em_changed_at)
+  VALUES (:be_ids, :grp, :active, :new_uid, NOW(), :changed_id, NOW())
+"</span>;
+    
+    <span class="k">$stmt</span> = <span class="k">$pdo</span>-&gt;prepare(<span class="k">$sql</span>);
+    <span class="k">$stmt</span>-&gt;execute([
+        <span class="s">':be_ids'</span>     =&gt; <span class="k">$be_ids</span>,          <span class="c">// int</span>
+        <span class="s">':grp'</span>        =&gt; <span class="k">$mail_grp</span>,        <span class="c">// varchar(5)</span>
+        <span class="s">':active'</span>     =&gt; <span class="k">$em_active</span>,       <span class="c">// 'a'|'i'|''</span>
+        <span class="s">':new_uid'</span>    =&gt; <span class="k">$em_new_uid</span>,      <span class="c">// int</span>
+        <span class="s">':changed_id'</span> =&gt; <span class="k">$em_changed_id</span>,  <span class="c">// varchar(10)</span>
+        ]);
+    
+    <span class="k">$newId</span> = (int)<span class="k">$pdo</span>-&gt;lastInsertId();</code></pre>
+    </div>
+    
+    <div>
+    <pre><code><span class="c">// READ (ein Datensatz)</span>
+    <span class="k">$sql</span> = <span class="s">"SELECT * FROM fv_adm_mail WHERE em_id = :id"</span>;
+    <span class="k">$stmt</span> = <span class="k">$pdo</span>-&gt;prepare(<span class="k">$sql</span>);
+    <span class="k">$stmt</span>-&gt;execute([<span class="s">':id'</span> =&gt; <span class="k">$em_id</span>]);
+    <span class="k">$row</span> = <span class="k">$stmt</span>-&gt;fetch(); <span class="c">// false wenn nicht gefunden</span>
+    
+    <span class="c">// READ (Liste nach Gruppe)</span>
+    <span class="k">$sql</span> = <span class="s">"
+  SELECT *
+  FROM fv_adm_mail
+  WHERE em_mail_grp = :grp
+  ORDER BY em_id DESC
+"</span>;
+    <span class="k">$stmt</span> = <span class="k">$pdo</span>-&gt;prepare(<span class="k">$sql</span>);
+    <span class="k">$stmt</span>-&gt;execute([<span class="s">':grp'</span> =&gt; <span class="k">$mail_grp</span>]);
+    <span class="k">$rows</span> = <span class="k">$stmt</span>-&gt;fetchAll();</code></pre>
+    </div>
+    
+    <div>
+    <pre><code><span class="c">// UPDATE</span>
+    <span class="k">$sql</span> = <span class="s">"
+  UPDATE fv_adm_mail
+  SET
+    be_ids = :be_ids,
+    em_mail_grp = :grp,
+    em_active = :active,
+    em_changed_id = :changed_id,
+    em_changed_at = NOW()
+  WHERE em_id = :id
+"</span>;
+    
+    <span class="k">$stmt</span> = <span class="k">$pdo</span>-&gt;prepare(<span class="k">$sql</span>);
+    <span class="k">$stmt</span>-&gt;execute([
+        <span class="s">':be_ids'</span>     =&gt; <span class="k">$be_ids</span>,
+        <span class="s">':grp'</span>        =&gt; <span class="k">$mail_grp</span>,
+        <span class="s">':active'</span>     =&gt; <span class="k">$em_active</span>,
+        <span class="s">':changed_id'</span> =&gt; <span class="k">$em_changed_id</span>,
+        <span class="s">':id'</span>         =&gt; <span class="k">$em_id</span>,
+        ]);
+    
+    <span class="c">// $stmt-&gt;rowCount() liefert Anzahl geänderter Zeilen</span></code></pre>
+    </div>
+    
+    <div>
+    <pre><code><span class="c">// DELETE</span>
+    <span class="k">$sql</span> = <span class="s">"DELETE FROM fv_adm_mail WHERE em_id = :id"</span>;
+    <span class="k">$stmt</span> = <span class="k">$pdo</span>-&gt;prepare(<span class="k">$sql</span>);
+    <span class="k">$stmt</span>-&gt;execute([<span class="s">':id'</span> =&gt; <span class="k">$em_id</span>]);</code></pre>
+    </div>
+    </div>
+    
+    <div class="note">
+    Optional empfehlenswert: statt <code>DELETE</code> eher Soft-Delete über <code>em_active = 'i'</code>, wenn du Historie behalten willst.
+    </div>
+    </div>
+    </section>
+    
+    <section class="panel">
+    <header>
+    <h2>4) Falls du 1:1 die alte Logik behalten willst (PDO + zwei Queries)</h2>
+    <p>Funktioniert, ist aber langsamer als JOIN (N+1 Queries). Nur falls du es bewusst so willst.</p>
+    </header>
+    <div class="content">
+    <pre><code><span class="k">$sql_mail</span> = <span class="s">"SELECT be_ids FROM fv_adm_mail WHERE em_mail_grp = :grp"</span>;
+    <span class="k">$stmtMail</span> = <span class="k">$pdo</span>-&gt;prepare(<span class="k">$sql_mail</span>);
+    <span class="k">$stmtMail</span>-&gt;execute([<span class="s">':grp'</span> =&gt; <span class="k">$mail_grp</span>]);
+    
+    <span class="k">$adr_list</span> = <span class="s">""</span>;
+    
+    <span class="k">$stmtMitgl</span> = <span class="k">$pdo</span>-&gt;prepare(<span class="s">"SELECT mi_email FROM fh_mitglieder WHERE mi_id = :id"</span>);
+    
+    <span class="k">while</span> (<span class="k">$row</span> = <span class="k">$stmtMail</span>-&gt;fetch()) {
+        <span class="k">$stmtMitgl</span>-&gt;execute([<span class="s">':id'</span> =&gt; (int)<span class="k">$row</span>[<span class="s">'be_ids'</span>]]);
+        <span class="k">$email</span> = <span class="k">$stmtMitgl</span>-&gt;fetchColumn();
+        
+        <span class="k">if</span> (<span class="k">$email</span>) {
+            <span class="k">$adr_list</span> = (<span class="k">$adr_list</span> === <span class="s">""</span>) ? <span class="k">$email</span> : (<span class="k">$adr_list</span> . <span class="s">", "</span> . <span class="k">$email</span>);
+        }
+    }</code></pre>
+    </div>
+    </section>
+    
+    </main>
+    
+    <footer style="margin-top:18px; color:var(--muted); font-size:12.5px; line-height:1.5;">
+    <div style="border-top:1px solid var(--line); padding-top:14px;">
+    Wenn du mir kurz bestätigst, ob <code>fv_adm_mail.be_ids</code> wirklich auf <code>fh_mitglieder.mi_id</code> zeigt (oder doch auf eine andere ID),
+    passe ich dir den JOIN exakt an.
+    </div>
+    </footer>
+    </div>
+    
+    <script>
+    // purely presentational: small "stagger reveal"
+    const els = Array.from(document.querySelectorAll('.panel'));
+    const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+            if(e.isIntersecting){
+                e.target.style.animation = 'reveal .65s cubic-bezier(.2,.8,.2,1) both';
+                e.target.style.animationDelay = (els.indexOf(e.target) * 70) + 'ms';
+                io.unobserve(e.target);
+            }
+        })
+    }, {threshold: 0.12});
+        
+        els.forEach(el=>{
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(10px)';
+            io.observe(el);
+        });
+            
+            const st = document.createElement('style');
+            st.textContent = `
+      @keyframes reveal{
+        from{opacity:0; transform:translateY(12px)}
+        to{opacity:1; transform:translateY(0)}
+      }
+    `;
+            document.head.appendChild(st);
+            </script>
+            </body>
+            </html>

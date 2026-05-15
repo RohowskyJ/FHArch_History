@@ -1,0 +1,3570 @@
+[26-Apr-2026 04:49:47 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 04:49:47 UTC] Suchparameter: '2'
+[26-Apr-2026 04:49:47 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 04:49:47 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Aktiv
+                    [fl_id] => 14
+                    [bes_fl_id] => 14
+                    [fl_beschreibung] => Gäste - darf fast alles lesen
+                    [fl_modules] => ONU-GAST
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:06:53 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:06:53 UTC] Suchparameter: '2'
+[26-Apr-2026 05:06:53 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:06:53 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Aktiv
+                    [fl_id] => 14
+                    [bes_fl_id] => 14
+                    [fl_beschreibung] => Gäste - darf fast alles lesen
+                    [fl_modules] => ONU-GAST
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:20:33 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:20:33 UTC] Suchparameter: '2'
+[26-Apr-2026 05:20:33 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:20:33 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Aktiv
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:21:04 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:21:04 UTC] Suchparameter: '2'
+[26-Apr-2026 05:21:04 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:21:04 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Inaktiv
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:23:38 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:23:38 UTC] Suchparameter: '2'
+[26-Apr-2026 05:23:38 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:23:38 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Inaktiv
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:24:02 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:24:02 UTC] Suchparameter: '2'
+[26-Apr-2026 05:24:03 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:24:03 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Inaktiv
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:35:23 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:35:23 UTC] Suchparameter: '2'
+[26-Apr-2026 05:35:23 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:35:23 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Inaktiv
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:37:00 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:37:00 UTC] Suchparameter: '2'
+[26-Apr-2026 05:37:00 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:37:00 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Inaktiv
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:37:30 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:37:30 UTC] Suchparameter: '2'
+[26-Apr-2026 05:37:30 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:37:30 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Inaktiv
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:41:19 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:41:19 UTC] Suchparameter: '2'
+[26-Apr-2026 05:41:19 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 15
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:41:19 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 15
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Inaktiv
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:41:46 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:41:46 UTC] Suchparameter: '2'
+[26-Apr-2026 05:41:46 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:41:46 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Inaktiv
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:47:14 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:47:14 UTC] Suchparameter: '2'
+[26-Apr-2026 05:47:15 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:47:15 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => Inaktiv
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:47:27 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:47:27 UTC] Suchparameter: '2'
+[26-Apr-2026 05:47:27 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:47:27 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span class='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:48:01 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:48:01 UTC] Suchparameter: '2'
+[26-Apr-2026 05:48:01 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:48:01 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span class='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:51:01 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:51:01 UTC] Suchparameter: '2'
+[26-Apr-2026 05:51:01 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:51:01 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 05:58:01 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 05:58:01 UTC] Suchparameter: '2'
+[26-Apr-2026 05:58:01 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 05:58:01 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 09:16:25 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 09:16:25 UTC] Suchparameter: '2'
+[26-Apr-2026 09:16:25 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 09:16:25 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 12:03:23 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 12:03:23 UTC] Suchparameter: '2'
+[26-Apr-2026 12:03:23 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 12:03:23 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[26-Apr-2026 12:41:56 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[26-Apr-2026 12:41:56 UTC] Suchparameter: '5'
+[26-Apr-2026 12:41:56 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[26-Apr-2026 12:41:56 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 5
+                    [be_id] => 5
+                    [fr_aktiv] => <span style='color:green;'>Aktiv</span>
+                    [fl_id] => 14
+                    [bes_fl_id] => 14
+                    [fl_beschreibung] => Gäste - darf fast alles lesen
+                    [fl_modules] => ONU-GAST
+                    [action] => <a href='RollenEdit.php?ID=5&beId=5'>Edit</a>
+                )
+
+        )
+
+)
+
+[27-Apr-2026 06:51:30 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[27-Apr-2026 06:51:30 UTC] Suchparameter: '2'
+[27-Apr-2026 06:51:30 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[27-Apr-2026 06:51:30 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[27-Apr-2026 06:51:45 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[27-Apr-2026 06:51:45 UTC] Suchparameter: '2'
+[27-Apr-2026 06:51:45 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[27-Apr-2026 06:51:45 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[29-Apr-2026 06:43:07 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[29-Apr-2026 06:43:07 UTC] Suchparameter: '2'
+[29-Apr-2026 06:43:07 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[29-Apr-2026 06:43:07 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[29-Apr-2026 06:43:18 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[29-Apr-2026 06:43:18 UTC] Suchparameter: '2'
+[29-Apr-2026 06:43:18 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[29-Apr-2026 06:43:18 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[30-Apr-2026 06:04:56 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[30-Apr-2026 06:04:56 UTC] Suchparameter: '2'
+[30-Apr-2026 06:04:56 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[30-Apr-2026 06:04:56 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[01-May-2026 04:57:20 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[01-May-2026 04:57:20 UTC] Suchparameter: '6'
+[01-May-2026 04:57:20 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[01-May-2026 04:57:20 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 6
+                    [be_id] => 6
+                    [fr_aktiv] => <span style='color:green;'>Aktiv</span>
+                    [fl_id] => 14
+                    [bes_fl_id] => 14
+                    [fl_beschreibung] => Gäste - darf fast alles lesen
+                    [fl_modules] => ONU-GAST
+                    [action] => <a href='RollenEdit.php?ID=6&beId=6'>Edit</a>
+                )
+
+        )
+
+)
+
+[01-May-2026 05:02:11 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[01-May-2026 05:02:11 UTC] Suchparameter: '4'
+[01-May-2026 05:02:11 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[01-May-2026 05:02:11 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 4
+                    [be_id] => 4
+                    [fr_aktiv] => <span style='color:green;'>Aktiv</span>
+                    [fl_id] => 14
+                    [bes_fl_id] => 14
+                    [fl_beschreibung] => Gäste - darf fast alles lesen
+                    [fl_modules] => ONU-GAST
+                    [action] => <a href='RollenEdit.php?ID=4&beId=4'>Edit</a>
+                )
+
+        )
+
+)
+
+[01-May-2026 09:01:48 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[01-May-2026 09:01:48 UTC] Suchparameter: '3'
+[01-May-2026 09:01:48 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[01-May-2026 09:01:48 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 3
+                    [be_id] => 3
+                    [fr_aktiv] => <span style='color:green;'>Aktiv</span>
+                    [fl_id] => 13
+                    [bes_fl_id] => 13
+                    [fl_beschreibung] => Normale Benutzer ohne besondere Rechte (Default- Brechtigung)
+                    [fl_modules] => ONU-ALL
+                    [action] => <a href='RollenEdit.php?ID=3&beId=3'>Edit</a>
+                )
+
+        )
+
+)
+
+[01-May-2026 09:02:05 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[01-May-2026 09:02:05 UTC] Suchparameter: '3'
+[01-May-2026 09:02:05 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[01-May-2026 09:02:05 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 3
+                    [be_id] => 3
+                    [fr_aktiv] => <span style='color:green;'>Aktiv</span>
+                    [fl_id] => 13
+                    [bes_fl_id] => 13
+                    [fl_beschreibung] => Normale Benutzer ohne besondere Rechte (Default- Brechtigung)
+                    [fl_modules] => ONU-ALL
+                    [action] => <a href='RollenEdit.php?ID=3&beId=3'>Edit</a>
+                )
+
+        )
+
+)
+
+[04-May-2026 07:11:31 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[04-May-2026 07:11:31 UTC] Suchparameter: '2'
+[04-May-2026 07:11:32 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[04-May-2026 07:11:32 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+
+[04-May-2026 07:11:39 UTC] Repo Objekt: Fharch\Core\Auth\API\RO_ListeRepository Object
+(
+    [pdo:Fharch\Core\Auth\API\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[04-May-2026 07:11:39 UTC] Suchparameter: '2'
+[04-May-2026 07:11:39 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 20
+            [formatter] => html
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[04-May-2026 07:11:39 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 20
+                    [formatter] => html
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 2
+                    [be_id] => 2
+                    [fr_aktiv] => <span style='color:red;'>Inaktiv</span>
+                    [fl_id] => 4
+                    [bes_fl_id] => 4
+                    [fl_beschreibung] => Sachbearbeiter Öffentlichkeitsarbeit
+                    [fl_modules] => ADM-OEF
+                    [action] => <a href='RollenEdit.php?ID=2&beId=2'>Edit</a>
+                )
+
+        )
+
+)
+

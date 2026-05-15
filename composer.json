@@ -13,7 +13,9 @@
      },
      "autoload" : {
           "psr-4" : {
-               "Fharch\\Core\\" : "src/Core/"
+              "Fharch\\Core\\" : "login/Core/",
+              "Fharch\\Core\\Services\\API\\" : "login/Core/Services/",
+              "Fharch\\Core\\AllgVerw\\API\\" : "login/Core/AllgVerw/API/"
           }
      },
      "autoload-dev" : {

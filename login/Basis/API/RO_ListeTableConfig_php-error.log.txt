@@ -1,0 +1,526 @@
+[10-Apr-2026 15:51:25 UTC] Repo Objekt: FSArch\Login\Basis\RO_ListeRepository Object
+(
+    [pdo:FSArch\Login\Basis\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[10-Apr-2026 15:51:25 UTC] Suchparameter: '3'
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\BS_TableColumnMetadata_class.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[10-Apr-2026 15:51:25 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[10-Apr-2026 15:51:25 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[10-Apr-2026 15:51:25 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 3
+                    [be_id] => 3
+                    [fr_aktiv] => Aktiv
+                    [fl_id] => 13
+                    [bes_fl_id] => 13
+                    [fl_beschreibung] => Normale Benutzer ohne besondere Rechte (Default- Brechtigung)
+                    [fl_modules] => ONU-ALL
+                    [action] => <a href='VS_RollenEdit.php?ID=3&beId=3'>Edit</a>
+                )
+
+        )
+
+)
+
+[11-Apr-2026 16:45:37 UTC] Repo Objekt: FSArch\Login\Basis\RO_ListeRepository Object
+(
+    [pdo:FSArch\Login\Basis\RO_ListeRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[11-Apr-2026 16:45:37 UTC] Suchparameter: '1'
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\common\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Mitglieder\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Oeffi\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\FZG\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\INV\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Arch\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\PSA\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Foto\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\BS_TableColumnMetadata_class.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\FSArch\Login\Basis\BS_TableColumnMetadata.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\FSArch\Login\Basis\BS_TableColumnMetadata_CLS.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\FSArch\Login\Basis\BS_TableColumnMetadata_API.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\FSArch\Login\Basis\BS_TableColumnMetadata_inc.php
+[11-Apr-2026 16:45:37 UTC] Autoloader prüft: C:\JProgs\htdocs\fsarch-hist\login\Basis\API\FSArch\Login\Basis\BS_TableColumnMetadata_lib.php
+[11-Apr-2026 16:45:37 UTC] Columns: Array
+(
+    [0] => Array
+        (
+            [title] => Aktion
+            [field] => action
+            [width] => 6
+            [hozAlign] => center
+            [headerSort] => 
+            [formatter] => html
+        )
+
+    [1] => Array
+        (
+            [title] => Fortl. Nr.
+            [field] => fr_id
+            [width] => 8
+            [hozAlign] => center
+            [formatter] => plaintext
+        )
+
+    [2] => Array
+        (
+            [title] => in- /Aktiv
+            [field] => fr_aktiv
+            [width] => 8
+            [formatter] => plaintext
+        )
+
+    [3] => Array
+        (
+            [title] => Beschreibung
+            [field] => fl_beschreibung
+            [formatter] => plaintext
+        )
+
+    [4] => Array
+        (
+            [title] => Berechtigungen für Module
+            [field] => fl_modules
+            [formatter] => plaintext
+        )
+
+)
+
+[11-Apr-2026 16:45:37 UTC] Response Array: Array
+(
+    [columns] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Aktion
+                    [field] => action
+                    [width] => 6
+                    [hozAlign] => center
+                    [headerSort] => 
+                    [formatter] => html
+                )
+
+            [1] => Array
+                (
+                    [title] => Fortl. Nr.
+                    [field] => fr_id
+                    [width] => 8
+                    [hozAlign] => center
+                    [formatter] => plaintext
+                )
+
+            [2] => Array
+                (
+                    [title] => in- /Aktiv
+                    [field] => fr_aktiv
+                    [width] => 8
+                    [formatter] => plaintext
+                )
+
+            [3] => Array
+                (
+                    [title] => Beschreibung
+                    [field] => fl_beschreibung
+                    [formatter] => plaintext
+                )
+
+            [4] => Array
+                (
+                    [title] => Berechtigungen für Module
+                    [field] => fl_modules
+                    [formatter] => plaintext
+                )
+
+        )
+
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [fr_id] => 1
+                    [be_id] => 1
+                    [fr_aktiv] => Aktiv
+                    [fl_id] => 1
+                    [bes_fl_id] => 1
+                    [fl_beschreibung] => Super- Administrator, darf alles und Überall auf diesen Daten
+                    [fl_modules] => ADM-ALLE
+                    [action] => <a href='VS_RollenEdit.php?ID=1&beId=1'>Edit</a>
+                )
+
+        )
+
+)
+

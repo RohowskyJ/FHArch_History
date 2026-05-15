@@ -1,0 +1,71 @@
+[30-Apr-2026 06:28:59 UTC] PHP Deprecated:  Creation of dynamic property Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository::$pdo is deprecated in C:\JProgs\htdocs\FHArch-oop\src\Core\Modules\Mitglieder\API\MI_MemberRepository.php on line 16
+[30-Apr-2026 06:28:59 UTC] PHP Stack trace:
+[30-Apr-2026 06:28:59 UTC] PHP   1. {main}() C:\JProgs\htdocs\FHArch-oop\src\Core\Modules\Mitglieder\API\MI_Liste_API.php:0
+[30-Apr-2026 06:28:59 UTC] PHP   2. Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository->__construct($pdo = class PDO {  }) C:\JProgs\htdocs\FHArch-oop\src\Core\Modules\Mitglieder\API\MI_Liste_API.php:45
+[30-Apr-2026 06:28:59 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo] => PDO Object
+        (
+        )
+
+)
+
+[30-Apr-2026 06:28:59 UTC] Suchparameter: ''
+[01-May-2026 05:12:11 UTC] PHP Deprecated:  Creation of dynamic property Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository::$pdo is deprecated in C:\JProgs\htdocs\FHArch-oop\src\Core\Modules\Mitglieder\API\MI_MemberRepository.php on line 16
+[01-May-2026 05:12:11 UTC] PHP Stack trace:
+[01-May-2026 05:12:11 UTC] PHP   1. {main}() C:\JProgs\htdocs\FHArch-oop\src\Core\Modules\Mitglieder\API\MI_Liste_API.php:0
+[01-May-2026 05:12:11 UTC] PHP   2. Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository->__construct($pdo = class PDO {  }) C:\JProgs\htdocs\FHArch-oop\src\Core\Modules\Mitglieder\API\MI_Liste_API.php:45
+[01-May-2026 05:12:11 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo] => PDO Object
+        (
+        )
+
+)
+
+[01-May-2026 05:12:11 UTC] Suchparameter: ''
+[01-May-2026 09:05:04 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo:protected] => PDO Object
+        (
+        )
+
+)
+
+[01-May-2026 09:05:04 UTC] Suchparameter: ''
+[01-May-2026 09:05:49 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo:protected] => PDO Object
+        (
+        )
+
+)
+
+[01-May-2026 09:05:49 UTC] Suchparameter: ''
+[04-May-2026 07:04:38 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo:protected] => PDO Object
+        (
+        )
+
+)
+
+[04-May-2026 07:04:38 UTC] Suchparameter: ''
+[04-May-2026 07:05:36 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo:protected] => PDO Object
+        (
+        )
+
+)
+
+[04-May-2026 07:05:36 UTC] Suchparameter: ''
+[05-May-2026 06:01:26 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo:protected] => PDO Object
+        (
+        )
+
+)
+
+[05-May-2026 06:01:26 UTC] Suchparameter: ''

@@ -1,0 +1,54 @@
+Ansatz der Installationsbeschreibung
+
+Datenbank anlegen
+
+Daten bereithalten URL Datenbank- Parameter (Host/DB/User/pw/port/ ....)
+
+Daten herunterladen
+
+Daten unzippen, am besten in die Test/Life- Umgebung
+
+Die Konfiguraton und einspielen der Datenbank- Tabellen wird durch Aufruf der Seite angestossen. 
+Da (noch) die Datnbank- Konfiguration fehlt, wird automatisch das Script VFH/install/install.php aufgerufen. 
+Hier als erstes die Datnbank- Parameter eingeben.
+Parameter definieren in install.php, Notlösung händisch in install.ini einfügen
+aus der install.ini werden config_d.ini (Datenbankzugriff) , config_m.ini (für die erlaubtem Programmteile) und config_s.ini (Parameter für die Anzeigen)
+
+Ablauf in install.php.
+abfrage parameter, Testen der Parameter (db: zugriff möglich !), anlegen DB- Tabellen, 
+		Ohne Db Zugriff: Anleitug für manuelle Eingabe
+
+umbenennen Verzeichnis install in zz!install
+
+
+
+UID/PW nach Installation: admin/banane1a (Default-PW für alle neu angelegten Benutzer)
+
+js/ajax autocomplete.js
+
+neuer Ansatz:
+
+Installation Apache, PHP, Mysql/MariaDB, PHPMysql, FTP
+
+Entpacken der Scripts
+
+ Parameter Darstellung eingeben (Hostname, Benutzer. ID/passwort (config_s.ini), Funktionsumfang (Mandantenfähig/ Singulär( + Mandanten-Nummer)
+ Parameter Datenbank- Namen (Benutzer- id, Passworte (Localhost/Server) eingeben (config_d.ini)
+ Parameter freigeschaltene Module (config_m.ini)
+
+Anlegen der DB-Tabellen
+allg- Verwaltungs- Tabellen(fh_*, mit oder ohne Dateien (Eigentümer, Mitglieder ; übernehmen oder neu anlegen (Mitglied: neuer Name entsprechend mit neuem PW anlegen, Benutzer und Zugriff)
+
+anlegen der Projekt- Tabellen mit Daten, so vorhanden
+
+
+
+
+Installatons- Szenarien.
+
+Neu Installation, kaum daten zu übernehmen nur postleitzahlen
+
+Neu Installation, Teilweise Datenübernahme (Single- Mandant. Daten eines einzigen Mandanten zu übernehmen)
+Eigentümer-Datei mit einem Record (= Eigentümer- Nummer = 21 = FF Wr- Neudorf, alle Tabellen *_21, alle Dateien /login/Aord_Verz/21/*, /login/Beschreibung/
+
+Übersiedelung der Seite auf neue Lokaton - Alle Daten Sichern und neu installieren des kompletten Bestandes

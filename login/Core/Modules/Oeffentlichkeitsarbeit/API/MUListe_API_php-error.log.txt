@@ -1,0 +1,50 @@
+[14-May-2026 06:57:23 UTC] Repo Objekt: Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository Object
+(
+    [pdo:Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[14-May-2026 06:57:23 UTC] Search ''
+[14-May-2026 06:57:23 UTC] ListType 'Alle'
+[14-May-2026 10:32:12 UTC] Repo Objekt: Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository Object
+(
+    [pdo:Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[14-May-2026 10:32:12 UTC] Search ''
+[14-May-2026 10:32:12 UTC] ListType 'Alle'
+[14-May-2026 10:59:22 UTC] Repo Objekt: Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository Object
+(
+    [pdo:Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[14-May-2026 10:59:22 UTC] Search ''
+[14-May-2026 10:59:22 UTC] ListType 'Alle'
+[14-May-2026 11:10:25 UTC] Repo Objekt: Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository Object
+(
+    [pdo:Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[14-May-2026 11:10:25 UTC] Search ''
+[14-May-2026 11:10:25 UTC] ListType 'Alle'
+[14-May-2026 15:55:29 UTC] Repo Objekt: Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository Object
+(
+    [pdo:Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository:private] => PDO Object
+        (
+        )
+
+)
+
+[14-May-2026 15:55:29 UTC] Search ''
+[14-May-2026 15:55:29 UTC] ListType 'Alle'
