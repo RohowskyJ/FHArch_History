@@ -1,5 +1,0 @@
-<?php
-/** 
- * Pesrsönliche Schutzausrüstung
- * 
- */
