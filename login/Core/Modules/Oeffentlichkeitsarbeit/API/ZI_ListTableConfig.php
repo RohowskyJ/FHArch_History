@@ -12,9 +12,9 @@ use Fharch\Core\Services\TableColumnMetadata;
 
 ini_set('display_errors', 0);
 ini_set('log_errors', 1);
-ini_set('error_log', "DO_TableConfig_php-error.log.txt");
+ini_set('error_log', "ZI_TableConfig_php-error.log.txt");
 
-class DO_ListTableConfig {
+class ZI_ListTableConfig {
     /**
      * Liefert die Spalten-Konfiguration für tabulator.js basierend auf dem Listentyp
      * @param string $listType
@@ -23,14 +23,15 @@ class DO_ListTableConfig {
 
     private static string $logFile = "ZI_TableConfig_debug.log.txt";
     
-    public static function getColumns(string $listType, PDO $pdo): array {
+    public static function getColumns(string $listType, PDO $pdo, $ztNr): array {
  
+     
         $sortNo = []; // nicht zu sortierende Spalten
         $hideNo = []; // nicht versteckbare Spalten
         $editable = []; // editierbare Spalten
     
         $meta = new TableColumnMetadata($pdo, 'fharch_new', false);
-        $colsByTable = $meta->getColumnsForTables(["oe_dokumente"]);
+        $colsByTable = $meta->getColumnsForTables(["oe_zeitung_".$ztNr]);
         
         $TabTitles =  [];
         $altTitel = [];
@@ -41,7 +42,7 @@ class DO_ListTableConfig {
             case "Alle":
                 
             default: 
-                $showCols = ["dk_id", "dk_thema", "dk_titel", "dk_author", "dk_dsn"];
+                $showCols = ["ih_id", "ih_jahr", "ih_kateg", "ih_sg", "ih_titel", "ih_autor"];
         }
     
         /** erstellen der Titel Header */
@@ -49,7 +50,7 @@ class DO_ListTableConfig {
         $colStyles  = $meta->getStylesMap();
         $colTypes = $meta->getTypesMap();
         $colLength = $meta->getMaxLengthsMap();
-       
+        
         $TabTitles[] = ["title" => "Aktion", "field" => "action", "width" =>  6 , "hozAlign" => "center",  "headerSort" => false ,  "formatter" => "html" ];
         
         foreach ($showCols as $fldName ) { 
@@ -62,16 +63,17 @@ class DO_ListTableConfig {
                 $titel = ucfirst($fldName);
             }
             
-            if ($fldName == 'dk_id') {
+            if ($fldName == 'ih_id') {
                 $TabTitles[] = ["title" => $titel, "field" => $fldName, "width" =>  8 ,  "hozAlign" => "center", "formatter" => 'html' ];
-            } else if ($fldName == 'dk_titel' || $fldName == 'dk_author') {
+            } else if ($fldName == 'pr_text') {
                 $TabTitles[] = ["title" => $titel, "field" => $fldName,  "formatter" => 'textarea' ];
-            } else if ($fldName == 'dk_dsn') {
+            } else if ($fldName == 'pr_bild_1' || $fldName == 'pr_bild_2') {
                 $TabTitles[] = ["title" => $titel, "field" => $fldName,  "formatter" => 'html' ];
             } else {
                 $TabTitles[] = ["title" => $titel, "field" => $fldName,  "headerFilter" => "input", "formatter" => 'plaintext' ];
             }
-
+           
+           
         }
         $json = json_encode($TabTitles);
         # self::log("Tabtitles $json");

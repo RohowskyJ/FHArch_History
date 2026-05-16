@@ -49,8 +49,8 @@ try {
     $search = $_GET['search'] ?? null;
     
     $data = $repo->getLinks($listType, $search);
-    error_log('Search '. var_export($search, true));
-    error_log('ListType '. var_export($listType, true));
+    #error_log('Search '. var_export($search, true));
+    #error_log('ListType '. var_export($listType, true));
     $columns = MP_ListTableConfig::getColumns($listType, $pdo);
     
     # error_log("Columns: " . print_r($columns, true));

@@ -21,7 +21,7 @@ class PR_ListTableConfig {
      * @return array
      */
 
-    private static string $logFile = "pr_TableConfig_debug.log.txt";
+    private static string $logFile = "PR_TableConfig_debug.log.txt";
     
     public static function getColumns(string $listType, PDO $pdo): array {
  
@@ -49,13 +49,8 @@ class PR_ListTableConfig {
         $colStyles  = $meta->getStylesMap();
         $colTypes = $meta->getTypesMap();
         $colLength = $meta->getMaxLengthsMap();
-        /*
-        $json = json_encode($colComment);
-        self::log( __LINE__ . " Kommentare $json  ");
-        */
-        #if ($listType != 'Alle') {
-            $TabTitles[] = ["title" => "Aktion", "field" => "action", "width" =>  6 , "hozAlign" => "center",  "headerSort" => false ,  "formatter" => "html" ];
-        #}
+       
+        $TabTitles[] = ["title" => "Aktion", "field" => "action", "width" =>  6 , "hozAlign" => "center",  "headerSort" => false ,  "formatter" => "html" ];
         
         foreach ($showCols as $fldName ) { 
            $titel = "";

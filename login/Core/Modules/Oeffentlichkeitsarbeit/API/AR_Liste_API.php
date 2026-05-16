@@ -53,7 +53,7 @@ try {
     # error_log('ListType '. var_export($listType, true));
     $columns = AR_ListTableConfig::getColumns($listType, $pdo);
     
-    error_log("Columns: " . print_r($columns, true));
+    # error_log("Columns: " . print_r($columns, true));
     
     $response = [
         'columns' => $columns,

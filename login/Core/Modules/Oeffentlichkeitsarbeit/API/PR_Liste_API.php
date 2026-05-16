@@ -49,8 +49,8 @@ try {
     $search = $_GET['search'] ?? null;
     
     $data = $repo->getPresse($listType, $search);
-    error_log('Search '. var_export($search, true));
-    error_log('ListType '. var_export($listType, true));
+    #error_log('Search '. var_export($search, true));
+    #error_log('ListType '. var_export($listType, true));
     $columns = PR_ListTableConfig::getColumns($listType, $pdo);
     
     error_log("Columns: " . print_r($columns, true));
@@ -60,7 +60,7 @@ try {
         'data' => $data,
     ];
     
-    error_log("Response Array: " . print_r($response, true));
+    #error_log("Response Array: " . print_r($response, true));
     
     $json = json_encode($response);
     

@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/MUListe_API_php-error.log.txt');
+ini_set('error_log', __DIR__ . '/ZI_Liste_API_php-error.log.txt');
 
 // Shutdown-Funktion direkt am Anfang registrieren
 register_shutdown_function(function() {
@@ -13,7 +13,7 @@ register_shutdown_function(function() {
         $message = "Shutdown error detected:\n" . print_r($error, true);
         error_log($message);
         // Optional: auch in eine separate Datei schreiben
-        file_put_contents(__DIR__ . '/MU_Liste_fatal_error.log', $message, FILE_APPEND);
+        file_put_contents(__DIR__ . '/PR_Liste_fatal_error.log', $message, FILE_APPEND);
     }
 });
 
@@ -27,8 +27,8 @@ register_shutdown_function(function() {
     }
     
 use Fharch\Core\Database\DB_GenericLog;
-use Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository;
-use Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListTableConfig;
+use Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\ZI_ListRepository;
+use Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\ZI_ListTableConfig;
 
 
 // Output Buffering starten, um unerwünschte Ausgabe zu kontrollieren
@@ -39,28 +39,31 @@ try {
     
     $dbLogger = new DB_GenericLog();
     $pdo = $dbLogger->getPDO();
-    $repo = new MU_ListRepository($pdo);
     
-    // Debug-Ausgabe als Log, nicht als vMP_dump
-    error_log("Repo Objekt: " . print_r($repo, true));
+    // Debug-Ausgabe als Log, nicht als MP_dump
+    error_log("Repo Objekt: " . print_r($pdo, true));
     
     // Parameter aus GET oder POST
     $listType = $_GET['T_List'] ?? 'Alle';
     $search = $_GET['search'] ?? null;
+    $custom = $_GET['cust_ID'] ?? null;
     
-    $data = $repo->getMuseen($listType, $search);
-    # error_log('Search '. var_export($search, true));
-    # error_log('ListType '. var_export($listType, true));
-    $columns = MU_ListTableConfig::getColumns($listType, $pdo);
+    $repo = new ZI_ListRepository($pdo, $custom);
     
-    # error_log("Columns: " . print_r($columns, true));
+    $data = $repo->getZInhalt($listType, $custom, $search);
+    #error_log('Search '. var_export($search, true));
+    #error_log('Custom '. var_export($custom, true));
+    #error_log('ListType '. var_export($listType, true));
+    $columns = ZI_ListTableConfig::getColumns($listType, $pdo, $custom);
+    
+    #error_log("Columns: " . print_r($columns, true));
     
     $response = [
         'columns' => $columns,
         'data' => $data,
     ];
     
-    # error_log("Response Array: " . print_r($response, true));
+    #rror_log("Response Array: " . print_r($response, true));
     
     $json = json_encode($response);
     

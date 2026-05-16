@@ -151,8 +151,17 @@ if ($phase == 1) {
     date_default_timezone_set('Europe/Berlin');
     
     $neu['zt_changed_id'] = $_SESSION['BS_Prim']['BE']['be_id'];
-var_dump($neu);
 
+    if ($neu['staat_id'] != '') {
+        $neu['mu_staat'] = $neu['staat_id'];
+    }
+    if ($neu['bdld_id'] != '') {
+        $neu['mu_bdland'] = $neu['bdld_id'];
+    }
+    if ($neu['mandant_id'] != '') {
+        $neu['mu_eigner'] = $neu['mandant_id'];
+    }
+    
     foreach ( $neu as $key => $val) {
         if (substr($key,0,3) != 'mu_') {
             unset($neu[$key]);

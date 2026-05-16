@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/ZI_Liste_API_php-error.log.txt');
+ini_set('error_log', __DIR__ . '/DO_Liste_API_php-error.log.txt');
 
 // Shutdown-Funktion direkt am Anfang registrieren
 register_shutdown_function(function() {
@@ -42,7 +42,7 @@ try {
     
     
     // Debug-Ausgabe als Log, nicht als MP_dump
-    error_log("Repo Objekt: " . print_r($pdo, true));
+    #error_log("Repo Objekt: " . print_r($pdo, true));
     
     // Parameter aus GET oder POST
     $listType = $_GET['T_List'] ?? 'Alle';
@@ -63,7 +63,7 @@ try {
         'data' => $data,
     ];
     
-    error_log("Response Array: " . print_r($response, true));
+    #error_log("Response Array: " . print_r($response, true));
     
     $json = json_encode($response);
     
