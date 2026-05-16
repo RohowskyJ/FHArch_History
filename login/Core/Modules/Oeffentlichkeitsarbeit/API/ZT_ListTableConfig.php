@@ -12,16 +12,16 @@ use Fharch\Core\Services\TableColumnMetadata;
 
 ini_set('display_errors', 0);
 ini_set('log_errors', 1);
-ini_set('error_log', "DO_TableConfig_php-error.log.txt");
+ini_set('error_log', "ZT_TableConfig_php-error.log.txt");
 
-class DO_ListTableConfig {
+class ZT_ListTableConfig {
     /**
      * Liefert die Spalten-Konfiguration für tabulator.js basierend auf dem Listentyp
      * @param string $listType
      * @return array
      */
 
-    private static string $logFile = "ZI_TableConfig_debug.log.txt";
+    private static string $logFile = "ZT_TableConfig_debug.log.txt";
     
     public static function getColumns(string $listType, PDO $pdo): array {
  
@@ -30,7 +30,7 @@ class DO_ListTableConfig {
         $editable = []; // editierbare Spalten
     
         $meta = new TableColumnMetadata($pdo, 'fharch_new', false);
-        $colsByTable = $meta->getColumnsForTables(["oe_dokumente"]);
+        $colsByTable = $meta->getColumnsForTables(["oe_zeitungen"]);
         
         $TabTitles =  [];
         $altTitel = [];
@@ -41,7 +41,7 @@ class DO_ListTableConfig {
             case "Alle":
                 
             default: 
-                $showCols = ["dk_id", "dk_thema", "dk_titel", "dk_author", "dk_dsn"];
+                $showCols = ["zt_id", "zt_name", "zt_herausg", "zt_internet", "zt_email", "zt_erstausgabe"];
         }
     
         /** erstellen der Titel Header */
@@ -49,8 +49,14 @@ class DO_ListTableConfig {
         $colStyles  = $meta->getStylesMap();
         $colTypes = $meta->getTypesMap();
         $colLength = $meta->getMaxLengthsMap();
-       
-        $TabTitles[] = ["title" => "Aktion", "field" => "action", "width" =>  6 , "hozAlign" => "center",  "headerSort" => false ,  "formatter" => "html" ];
+        /*
+        $json = json_encode($colComment);
+        self::log( __LINE__ . " Kommentare $json  ");
+        */
+        #if ($listType != 'Alle') {
+            $TabTitles[] = ["title" => "Aktion", "field" => "action", "width" =>  6 , "hozAlign" => "center",  "headerSort" => false ,  "formatter" => "html" ];
+            $TabTitles[] = ["title" => "Inhalt", "field" => "inhalt", "width" =>  6 , "hozAlign" => "center",  "headerSort" => false ,  "formatter" => "html" ];
+        #}
         
         foreach ($showCols as $fldName ) { 
            $titel = "";
@@ -62,16 +68,14 @@ class DO_ListTableConfig {
                 $titel = ucfirst($fldName);
             }
             
-            if ($fldName == 'dk_id') {
+            if ($fldName == 'zt_id' || $fldName == 'inhalt') {
                 $TabTitles[] = ["title" => $titel, "field" => $fldName, "width" =>  8 ,  "hozAlign" => "center", "formatter" => 'html' ];
-            } else if ($fldName == 'dk_titel' || $fldName == 'dk_author') {
-                $TabTitles[] = ["title" => $titel, "field" => $fldName,  "formatter" => 'textarea' ];
-            } else if ($fldName == 'dk_dsn') {
+            } else if ($fldName == 'zt_internet') {
                 $TabTitles[] = ["title" => $titel, "field" => $fldName,  "formatter" => 'html' ];
             } else {
                 $TabTitles[] = ["title" => $titel, "field" => $fldName,  "headerFilter" => "input", "formatter" => 'plaintext' ];
             }
-
+           
         }
         $json = json_encode($TabTitles);
         # self::log("Tabtitles $json");

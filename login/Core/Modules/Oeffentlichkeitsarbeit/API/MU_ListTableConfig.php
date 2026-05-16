@@ -55,10 +55,9 @@ class MU_ListTableConfig {
         $json = json_encode($colComment);
         self::log( __LINE__ . " Kommentare $json  ");
         */
-        #if ($listType != 'Alle') {
-            $TabTitles[] = ["title" => "Aktion", "field" => "action", "width" =>  6 , "hozAlign" => "center",  "headerSort" => false ,  "formatter" => "html" ];
-        #}
         
+        $TabTitles[] = ["title" => "Aktion", "field" => "action", "width" =>  6 , "hozAlign" => "center",  "headerSort" => false ,  "formatter" => "html" ];
+
         foreach ($showCols as $fldName ) { 
            $titel = "";
             if (isset($altTitel[$fldName]) AND $altTitel[$fldName] !=  "" ) {

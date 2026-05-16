@@ -137,21 +137,20 @@ if ($phase == 1) {
     date_default_timezone_set('Europe/Berlin');
     
     $neu['zt_changed_id'] = $_SESSION['BS_Prim']['BE']['be_id'];
-var_dump($neu);
 
     foreach ( $neu as $key => $val) {
-        if ($substr($key,0,3) != 'bs_') {
+        if (substr($key,0,3) != 'bs_') {
             unset($neu[$key]);
         }
     }
     
-    if ($neu['zt_id'] == 0) { # neuengabe
-        $ret = $this->createZeitung($neu);
+    if ($neu['bs_id'] == 0) { # neuengabe
+        $ret = $this->createMarktpl($neu);
     } else { # Update
-        $ret = $links->updateZeitung($neu['zt_id'] , $neu);
+        $ret = $links->updateMarktpl($neu['bs_id'] , $neu);
     }
     
-    header("Location:  ZeitungList.php");
+    header("Location:  MarktplList.php");
 }
 
 switch ($phase) {

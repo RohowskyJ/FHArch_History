@@ -5,7 +5,7 @@
  *
  * @author Josef Rohowsky - neu 2018
  *
- *
+ * 
  */
 use Fharch\Core\Services\FormRendererFlex;
 use Fharch\Core\Services\AutoCompleteAPI;
@@ -19,11 +19,31 @@ if ($debug) {
 $editProtect = false;  // mit true: keine Eingabe möglich für die ganze Seite
 $readonly = "";
 
+/** Vars für accordion */
+$accUpd = 1;
+
+/**Zugriffsteuerung */
 if ($Zugr == "Alle" || !userBerechtigtOK($Zugr)) {
     $editProtect = true;
     # $readonly = false;
+    $accUpd = 0; // für accordion
 }
+
 $forms = new FormRendererFlex($meta, $phase,  $neu, [], $editProtect, $module );
+
+/** Werte für Foto Mgmt */
+$dataSetAct = "";
+if ($neu['mu_id'] == 0) { // Neueingabe
+    $hide_area = 0;
+} else {
+    $hide_area = 1;
+    $dataSetAct = "data-active-index='0'";
+}
+
+/** input für Accordion */
+echo "<input type='hidden' id='recId' value='" . $neu['mu_id'] . " >";
+echo "<input type='hidden' id='accUpd' value='$accUpd' >";
+echo "<input type='hidden' id='recEigner' value='" . $neu['mu_eigner'] . " >";
 
 echo "<div class='white'>";
 # =========================================================================================================
@@ -54,24 +74,23 @@ echo $forms->renderTrenner('Land, Bundesland');
 # =========================================================================================================
 $st = $t = "";
 echo $forms->renderTextLikeFieldFlex('mu_staat', 50);
-AutoCompForm_Staat();
+if (!$editProtect) {
+    AutoCompForm_Staat();
+}
+
 $st = $neu['mu_staat'];
 echo $forms->renderTextLikeFieldFlex('mu_bdland', 50);
-AutoCompForm_Bdld($st);
+if (!$editProtect) {
+    AutoCompForm_Bdld('$st');
+}
+
 
 echo $forms->renderTextLikeFieldFlex('mu_eigner', 50);
-AutoCompForm_Eigent($t);
+if (!$editProtect) {
+    #AutoCompForm_Eigent('E');
+    AutoCompForm_Mandant();
+}
 
-/*
-$BD_Opt = VF_Sel_Bdld('mu_bdland', '8');
-
-echo $forms->renderSelectFieldFlex('mu_bdland', $BD_Opt);
-$ST_Opt = VF_Sel_Staat('mu_staat', '9');
-
-echo $forms->renderSelectFieldFlex('mu_staat', $ST_Opt);
-
-echo $forms->renderTextLikeFieldFlex('mu_eigner', 8);
-*/
 echo $forms->renderSelectFieldFlex('mu_mustyp', VF_Mus_Typ);
 $Et = array(
     "F" => "Feuerwehr",
@@ -79,12 +98,14 @@ $Et = array(
     "V" => "Verein"
 );
 echo $forms->renderSelectFieldFlex('mu_museigtyp', $Et);
+
 $dataSetAct = false;
 // accordion für Museums- Sammlung
 echo "<ul id='ms-accordion' class='accordionjs' $dataSetAct >";
 echo "<li>";
 echo "<div>Sammlungs- Beschreibung - für Details anklicken</div>";
 echo "<div>";
+
 echo $forms->renderTextLikeFieldFlex('mu_sammelbeg', 4);
 echo $forms->renderTextLikeFieldFlex('mu_sammlgschw', 200);
 echo $forms->renderTextLikeFieldFlex('mu_besobj_1', 100);
@@ -185,12 +206,12 @@ echo "</ul>";
 // ende accordion für Museums- Führungen
 
 # =========================================================================================================
-$hide_area = 1;
-$checked_f = "";
-if ($hide_area == 0) {  //toggle??
-    $checked_f = 'checked';
+$checkbox_f = "";
+
+if ($hide_area == 1 && !$editProtect) {  //toggle??    && $accUpd == 0
+   # $checked_f = 'checked';
+    $checkbox_f = "<a href='#' class='toggle-string' data-toggle-group='1'>Foto Daten eingeben/ändern</a>";
 }
-$checkbox_f = "<a href='#' class='toggle-string' data-toggle-group='1'>Foto Daten eingeben/ändern</a>";
 echo $forms->renderTrenner('Fotos',$checkbox_f);  #
 # =========================================================================================================
 echo "<input type='hidden' name='MAX_FILE_SIZE' value='400000' />";
@@ -237,11 +258,14 @@ echo "<p><a href='MuseenList.php'>Zurück zur Liste</a></p>";
 echo "</div>";
 
 /** notwendige css und js einfügen */
-# echo " <link rel='stylesheet' href='" . $path2ROOT . "VFH/css/FormsFlex.css' type='text/css'>";
 echo "<script src='" . $path2ROOT . "login/Core/AllgVerw/js/AutoComp_Staat.js' ></script>";
 echo "<script src='" . $path2ROOT . "login/Core/AllgVerw/js/AutoComp_Bdld.js' ></script>";
-# echo "<script src='" . $path2ROOT . "login/Core/Modules/js/AutoComp_Staat.js' ></script>";
-#echo "<script src='" . $path2ROOT . "login/Core/Services/js/FS_AutoComp_Staat.js' ></script>";
+echo "<script src='" . $path2ROOT . "login/Core/Modules/Mandanten/js/AutoComp_Mandant.js' ></script>";
+echo "<script src='" . $path2ROOT . "VFH/js/accordion.min.js' async></script>";
+echo "<script src='" . $path2ROOT . "VFH/js/add_accordion.js' async></script>";
+echo "<script src='" . $path2ROOT . "VFH/js/VF_toggle.js' async></script>";
+echo "<script src='" . $path2ROOT . "VFH/js/VF_Foto_Upl.js' async></script>";
+# echo "<script src='" . $path2ROOT . "VFH/js/VF_selFotoLibs.js' async></script>";
 # =========================================================================================================
 
 if ($debug) {

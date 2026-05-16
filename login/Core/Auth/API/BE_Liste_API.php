@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/MUListe_API_php-error.log.txt');
+ini_set('error_log', __DIR__ . '/BenutzerAPI_php-error.log.txt');
 
 // Shutdown-Funktion direkt am Anfang registrieren
 register_shutdown_function(function() {
@@ -13,54 +13,63 @@ register_shutdown_function(function() {
         $message = "Shutdown error detected:\n" . print_r($error, true);
         error_log($message);
         // Optional: auch in eine separate Datei schreiben
-        file_put_contents(__DIR__ . '/MU_Liste_fatal_error.log', $message, FILE_APPEND);
+        file_put_contents(__DIR__ . '/Benutzerfatal_error.log', $message, FILE_APPEND);
     }
 });
 
-    // AUTOLOADER für Composer-Klassen laden
-    
-    $composerAutoload = __DIR__ . '/../../../../../vendor/autoload.php';
-    if (file_exists($composerAutoload)) {
-        require_once $composerAutoload;
-    } else {
-        error_log('Composer autoload not found: ' . $composerAutoload);
-    }
-    
-use Fharch\Core\Database\DB_GenericLog;
-use Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListRepository;
-use Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\MU_ListTableConfig;
+$composerAutoload = __DIR__ . '/../../../../vendor/autoload.php';
+if (file_exists($composerAutoload)) {
+    require_once $composerAutoload;
+} else {
+    error_log('Composer autoload not found: ' . $composerAutoload);
+}
 
+use Fharch\Core\Database\DB_GenericLog;
+use Fharch\Core\Auth\API\BE_BenutzerRepository;
+use Fharch\Core\Auth\API\BE_BenutzerTableConfig;
+
+// Autoloader sollte die Klassen laden - kein require_once nötig
+if (!class_exists(DB_GenericLog::class)) {
+    error_log("Class Fharch\\Core\\Database\DB_GenericLog not found.");
+}
+if (!class_exists(Fharch\Core\Auth\API\BE_BenutzerRepository::class)) {
+    error_log("Class Fharch\\Core\\Auth\\API\\BE_BenutzerRepository not found.");
+}
+if (!class_exists(Fharch\Core\Auth\API\BE_BenutzerTableConfig::class)) {
+    error_log("Class Fharch\\Core\\Auth\\API\\BE_BenutzerTableConfig not found.");
+}
 
 // Output Buffering starten, um unerwünschte Ausgabe zu kontrollieren
 ob_start();
+
 try {
 
     header('Content-Type: application/json; charset=utf-8');
     
-    $dbLogger = new DB_GenericLog();
-    $pdo = $dbLogger->getPDO();
-    $repo = new MU_ListRepository($pdo);
+    $DBD = new DB_GenericLog();
+    $pdo = $DBD->getPDO();
+    $repo = new BE_BenutzerRepository($pdo);
     
-    // Debug-Ausgabe als Log, nicht als vMP_dump
+    // Debug-Ausgabe als Log, nicht als var_dump
     error_log("Repo Objekt: " . print_r($repo, true));
     
     // Parameter aus GET oder POST
     $listType = $_GET['T_List'] ?? 'Alle';
     $search = $_GET['search'] ?? null;
     
-    $data = $repo->getMuseen($listType, $search);
-    # error_log('Search '. var_export($search, true));
-    # error_log('ListType '. var_export($listType, true));
-    $columns = MU_ListTableConfig::getColumns($listType, $pdo);
+    error_log("Suchparameter: " . var_export($search, true));
     
-    # error_log("Columns: " . print_r($columns, true));
+    $data = $repo->getUsers($listType, $search);
+    $columns = BE_BenutzerTableConfig::getColumns($listType, $pdo);
+    
+    error_log("Columns: " . print_r($columns, true));
     
     $response = [
         'columns' => $columns,
         'data' => $data,
     ];
     
-    # error_log("Response Array: " . print_r($response, true));
+    error_log("Response Array: " . print_r($response, true));
     
     $json = json_encode($response);
     
