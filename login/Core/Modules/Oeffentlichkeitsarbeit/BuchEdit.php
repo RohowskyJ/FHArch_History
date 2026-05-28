@@ -62,7 +62,6 @@ use Fharch\Core\Services\TableColumnMetadata;
 use Fharch\Core\Services\FormRendererFlex;
 use Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\DB_Oeffentlich;
 
-$TABUcss = true;
 $header = "";
 HTML_header('Buch- Rezensionen', $header, 'Form', '90em'); # Parm: Titel,Subtitel,HeaderLine,Type,width
 
@@ -114,7 +113,8 @@ if ($phase == 0) {
         $neu['bu_format'] = $neu['bu_teaser'] = $neu['bu_text'] = $neu['bu_bild_1'] = $neu['bu_text_1'] = "";
         $neu['bu_bild_2'] = $neu['bu_text_2'] = $neu['bu_bild_3'] = $neu['bu_text_3'] = $neu['bu_bild_4'] = $neu['bu_text_4'] = "";
         $neu['bu_bild_5'] = $neu['bu_text_5'] = $neu['bu_bild_6'] = $neu['bu_text_6'] =  "";
-        $neu['bu_bew_ges'] = $neu['bu_bew_bild'] = $neu['bu_txt'] = $neu['bu_editor'] = $neu['bu_edit_dat'] = "";
+        $neu['bu_bew_ges'] = $neu['bu_bew_bild'] = $neu['bu_txt'] = $neu['bu_editor'] =  "";
+        $neu['bu_edit_dat'] = $neu['bu_frei_dat'] = '0000-00-00';
         $neu['bu_ed_id'] = $neu['bu_frei_id'] = 0;
         $neu['bu_frei_stat'] = "";
         $neu['bu_changed_id'] = $neu['bu_changed_at'] = "";
@@ -161,6 +161,11 @@ if ($phase == 1) {
     }
     
     $neu['bu_ed_id'] = intval($neu['bu_ed_id']);
+    $neu['bu_frei_id'] = intval($neu['bu_frei_id']);
+    
+    if (is_null($neu['bu_frei_dat'])) {
+        $neu['bu_frei_dat'] = '0000-00-00';
+    }
     
     foreach($neu as $inx => $val) {
         if (substr($inx, 0, 3) == 'bu_') {

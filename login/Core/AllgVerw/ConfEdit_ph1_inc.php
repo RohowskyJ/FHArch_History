@@ -5,6 +5,7 @@
  */
 $_SESSION[$module]['Inc_Arr'][] = "ConfEdit_ph1_inc.php";
 
+# var_dump($neu);
 if ($debug) {
     echo "<pre class=debug>ConfEdit_ph1_inc.php ist gestarted</pre>";
 }
@@ -90,7 +91,7 @@ foreach ($neu as $name => $value) { # für alle Felder aus der tabelle
    
 } # Ende der Schleife
 
-$dsn = $path2ROOT."login/Basis/common/$cfg";
+$dsn = $path2ROOT."login/config/$cfg";
 #var_dump($dsn);
 $datei = fopen($dsn, 'w');
 fputs($datei, $updas_s);
@@ -102,7 +103,7 @@ $result = $conf->updateConfig(1,$neu);
 if (isset($_SESSION[$module]['inst'])) {
     header("Location: ".$_SESSION[$module]['inst']);
 } else {
-    header("Location: ".$path2ROOT."/public/index.php");
+    header("Location: ".$path2ROOT."/VFH/index.php");
 }
 
 if ($debug) {

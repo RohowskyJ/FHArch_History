@@ -17,13 +17,9 @@ $neu['fi_changed_id'] = $_SESSION['BS_Prim']['BE']['be_id'];
 $neu['fi_changed_at'] =  date("Y-m-d H:i:s");
 
 if ($neu['fi_id'] == "0") {
-
     $recno = $firm->createFirmen($neu);
- 
-} else {
-    
+} else { 
     $ret = $firm->updateFirmen($fi_id, $neu);
-    
 }
 
 header ('Location: FirmenList.php');

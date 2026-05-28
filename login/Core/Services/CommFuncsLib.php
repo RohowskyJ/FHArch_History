@@ -35,13 +35,29 @@
  */
 
 /**
+ * Autocomplete Abfrage für Archivordung
+ * Teil der Form
+ */
+function AutoCompForm_ArchOrd () {
+    
+    ?>
+    <div class='field-row' style='background-color: PeachPuff; padding: 10px;'>
+    <div class='field-label'><label for="aord">Archiv- Ordnung auswählen (um zu Ändern):</label></div>
+    <div class='field-control'><input type="text" id="aord" name="aord" /></div>
+    <!-- Optional: verstecktes Feld für ID -->
+    <input type="hidden" id="aord_id" name="aord_id" />
+    </div>
+    <?php 
+} // ende AuzoCompForm_ArchOrd
+
+/**
  * Autocomplete Abfrage für Benutzer- Kurzzeichen
  * Teil der Form
  */
 function AutoCompForm_Benutzer () {
     
     ?>
-    <div class='field-row'>
+    <div class='field-row' style='background-color: PeachPuff; padding: 10px;'>
     <div class='field-label'><label for="benutzer">Benutzer auswählen (um zu Ändern):</label></div>
     <div class='field-control'><input type="text" id="benutzer" name="benutzer" /></div>
     <!-- Optional: verstecktes Feld für ID -->
@@ -59,7 +75,7 @@ function AutoCompForm_Bdld ($staatId = "") {
      * $staatId kann "" sein, kannn aber auch in id= 'staat_id' vorhanden sein, wenn vorhanden als where verwenden
      */
     ?>
-    <div class='field-row'>
+    <div class='field-row' style='background-color: PeachPuff; padding: 10px;'>
     <div class='field-label'><label for="bdld">Bundesland auswählen (um zu ändern):</label></div>
     <div class='field-control'><input type="text" id="bdld" name="bdld" /></div>
     <!-- Optional: verstecktes Feld für ID -->
@@ -98,19 +114,37 @@ function AutoCompForm_Eigent($t, $cl = false,$j="1")
 } // Ende AutoCompForm_Eigent
 
 /**
+ * Autocomplete Abfrage für Firmen- Kurzzeichen
+ * Teil der Form
+ */
+function AutoCompForm_Firma () {
+    /**
+     * $staatId kann "" sein, kannn aber auch in id= 'staat_id' vorhanden sein, wenn vorhanden als where verwenden
+     */
+    ?>
+    <div class='field-row' style='background-color: PeachPuff; padding: 10px;'>
+    <div class='field-label'><label for="firm">Bundesland auswählen (um zu ändern):</label></div>
+    <div class='field-control'><input type="text" id="firm" name="firm" /></div>
+    <!-- Optional: verstecktes Feld für ID -->
+    <input type="hidden" id="firm_id" name="firm_id" />
+    </div>
+    <?php 
+} // ende AutoCompForm_Firma
+
+/**
  * Autocomplete Abfrage für Mandanten- Kurzzeichen
  * Teil der Form
  */
 function AutoCompForm_Mandant () {
     ?>
-    <div class='field-row'>
+    <div class='field-row' style='background-color: PeachPuff; padding: 10px;'>
     <div class='field-label'><label for="staat">Mandanten auswählen (um zu Ändern):</label></div>
     <div class='field-control'><input type="text" id="mandant" name="mandant" /></div>
     <!-- Optional: verstecktes Feld für ID -->
     <input type="hidden" id="mandant_id" name="mandant_id" />
     </div>
     <?php 
-} // ende AutoCompForm_Bdld
+} // ende AutoCompForm_Mandant
 
 /**
  * Autocomplete Abfrage für Mitglieder- Kurzzeichen
@@ -120,8 +154,8 @@ function AutoCompForm_Mandant () {
  */
 function AutoCompForm_Mitgl ($em) {    
     ?>
-    <div class='field-row'>
-    <div class='field-label'><label for="staat">Mitglied auswählen :</label></div>
+    <div class='field-row' style='background-color: PeachPuff; padding: 10px;'>
+    <div class='field-label'><label for="mitgl">Mitglied auswählen :</label></div>
     <div class='field-control'><input type="text" id="mitgl" name="mitgl" /></div>
     <input type='input' id='email' value='<?php echo $em ?>' >
     <!-- Optional: verstecktes Feld für ID -->
@@ -133,13 +167,47 @@ function AutoCompForm_Mitgl ($em) {
 } // end AutoCopmForm_Mitgl
     
 /**
+ * Autocomplete Abfrage für Orts- Auswahl für PSA
+ * Teil der Form
+ */
+function AutoCompForm_Ort () {
+    /**
+     * $staatId kann "" sein, kannn aber auch in id= 'staat_id' vorhanden sein, wenn vorhanden als where verwenden
+     */
+    ?>
+    <div class='field-row' style='background-color: PeachPuff; padding: 10px;'>
+    <div class='field-label'><label for="ort">Ort auswählen (um zu ändern):</label></div>
+    <div class='field-control'><input type="text" id="ort" name="ort" /></div>
+    <!-- Optional: verstecktes Feld für ID -->
+    <input type="hidden" id="ort_id" name="ort_id" />
+    </div>
+    <?php 
+} // ende AutoCompForm_ort
+
+/**
+ * Autocomplete Abfrage für Sammlung- Kurzzeichen
+ * Teil der Form
+ */
+function AutoCompForm_Sammlg () {
+   
+    ?>
+    <div class='field-row' style='background-color: PeachPuff; padding: 10px;'>
+    <div class='field-label'><label for="sammlg">Sammlung auswählen (um zu ändern):</label></div>
+    <div class='field-control'><input type="text" id="sammlg" name="sammlg" /></div>
+    <!-- Optional: verstecktes Feld für ID -->
+    <input type="hidden" id="sammlg_id" name="sammlg_id" />
+    </div>
+    <?php 
+} // ende AutoCompForm_Sammlg
+
+/**
 * Autocomplete Abfrage für Staats- Kurzzeichen
 * Teil der Form
 */
 function AutoCompForm_Staat () {
     
     ?>
-    <div class='field-row'>
+    <div class='field-row' style='background-color: PeachPuff; padding: 10px;'>
     <div class='field-label'><label for="staat">Staat auswählen (um zu Ändern):</label></div>
     <div class='field-control'><input type="text" id="staat" name="staat" /></div>
     <!-- Optional: verstecktes Feld für ID -->
@@ -157,7 +225,7 @@ function AutoCompForm_Urheber () {
      * $staatId kann "" sein, kannn aber auch in id= 'staat_id' vorhanden sein, wenn vorhanden als where verwenden
      */
     ?>
-    <div class='field-row'>
+    <div class='field-row' style='background-color: PeachPuff; padding: 10px;'>
     <div class='field-label'><label for="staat">Urheber auswählen (um zu Ändern):</label></div>
     <div class='field-control'><input type="text" id="urheber" name="urheber" /></div>
     <!-- Optional: verstecktes Feld für ID -->
@@ -444,19 +512,26 @@ function Multi_Foto(array $Picts, $sub_funct = '')
  */
 function userBerechtigtOK ($berechtigung) {
     global $path2ROOT;
-    # var_dump($_SESSION['BS_Prim']);
+    
+    $message = __FILE__ . " " . __LINE__ . " Berechtigung $berechtigung";
+    file_put_contents('userber_error.log.txt', $message, FILE_APPEND);
+   
     if ($berechtigung == "Alle" ) {
         return true;
     }
+    $message = __FILE__ . " " . __LINE__ . " allesOK";
     if (isset($_SESSION['BS_Prim']['BE']['be_id']) && $_SESSION['BS_Prim']['BE']['be_id'] >= 1 && $_SESSION['BS_Prim']['BE']['roles'] != "") {   
         if (!userHasRole($berechtigung) ) {
             echo "Für diesen Programmteil besteht keine Berechtgung.<br>";
-            echo "<a href='" . $path2ROOT . "src/Core/Controllers/MainMenu.php > Zurück zum Anfang </a>";
+            echo "<a href='" . $path2ROOT . "login/Core/Controllers/MainMenu.php > Zurück zum Anfang </a>";
+            $message = __FILE__ . " " . __LINE__ . " Für diesen Programmteil besteht keine Berechtgung.";
+            
         }
+        file_put_contents('userber_error.log.txt', $message, FILE_APPEND);
         return true;
     } else {
         echo "Für diesen Programmteil besteht keine Berechtgung.<br>";
-        echo "<a href='/public/index.php' > Zurück zum Anfang </a>";
+        echo "<a href='/VFH/index.php' > Zurück zum Anfang </a>";
     }
     return false;
 } // ende userBerechtigtOK
@@ -645,8 +720,8 @@ function UploadForm_M()
                 echo "<a href='$p' target='Bild $j' > <img src='$p' alter='$p' height='200px'></a><br>";
                 echo $neu[$p_a['bi']];
             } else {
-                var_dump($sub_mod);
-                var_dump(SubMod_Dirs);
+                #var_dump($sub_mod);
+                #var_dump(SubMod_Dirs);
                 $sdir = SubMod_Dirs[$sub_mod];
                 $p = "<a href='".$path2ROOT ."login/AOrd_Verz/$sdir/".$neu[$p_a['bi']]."'> ".$neu[$p_a['bi']]."</a>" ;
                 

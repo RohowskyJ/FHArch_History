@@ -14,6 +14,11 @@ $Zugr = "ADM-MI";
 
 $_SESSION['BS_Prim']['Mod'] = ['module' => $module, 'smod' => $sub_module, 'caller' => $module];
 
+if (!isset($_SESSION['BS_Prim']['BE'])) {
+    $bPath = $_SESSION['BS_Prim']['Env']['basePath'];
+    header('location: $bPath/fharch-oop/VFH/');
+}
+
 $path2ROOT = "../../../../";
 
 require $path2ROOT . 'login/Core/Services/FuncsLib.php';

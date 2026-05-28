@@ -25,6 +25,8 @@ if ($neu['fd_geb_dat'] == "") {
     $neu['fd_geb_dat'] = "0000-00-00";
 }
 
+unset($neu['cust_ID']);
+unset($neu['proj']);
 unset($neu['list_ID']);
 unset($neu['staat']);
 unset($neu['staat_id']);

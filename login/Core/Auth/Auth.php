@@ -52,7 +52,7 @@ final class Auth
         // Optional: Passwort-Rehash prüfen und ggf. aktualisieren
         if (password_needs_rehash($hash, PASSWORD_DEFAULT)) {
             $newHash = password_hash($password, PASSWORD_DEFAULT);
-            $this->db->query(
+            $this->pdo->query(
                 'UPDATE fv_erlauben SET fe_pw = :pw WHERE be_id = :be_id',
                 ['pw' => $newHash, 'be_id' => $user['be_id']]
                 );
@@ -172,7 +172,7 @@ final class Auth
         
         // Neues Passwort hashen und speichern
         $newHash = password_hash($newPassword, PASSWORD_DEFAULT);
-        $this->db->query(
+        $this->pdo->query(
             'UPDATE fv_erlauben SET fe_pw = :pw, fe_changed_id = :changed_id, fe_changed_at = NOW() WHERE be_id = :be_id',
             [
                 'pw' => $newHash,
@@ -190,7 +190,7 @@ final class Auth
     public function createPasswordResetToken(int $beId, string $token, \DateTimeInterface $expires): void
     {
         // pw_used = 0, pw_expires = $expires
-        $this->db->query(
+        $this->pdo->query(
             'INSERT INTO fv_password_resets (be_id, token, pw_expires, pw_used, pw_created) VALUES (:be_id, :token, :expires, 0, NOW())',
             [
                 'be_id' => $beId,
@@ -218,7 +218,7 @@ final class Auth
      */
     public function markPasswordResetTokenUsed(string $token): void
     {
-        $this->db->query(
+        $this->pdo->query(
             'UPDATE fv_password_resets SET pw_used = 1 WHERE token = :token',
             ['token' => $token]
             );

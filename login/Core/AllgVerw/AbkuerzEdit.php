@@ -51,7 +51,7 @@ if (!$ber) {
 }
 
 
-require $path2ROOT . 'login/common/VF_Comm_Funcs.lib.php';
+# require $path2ROOT . 'login/common/VF_Comm_Funcs.lib.php';
 
 use Fharch\Core\Database\DB_GenericLog;
 use Fharch\Core\Database\DB_AllgVerw;

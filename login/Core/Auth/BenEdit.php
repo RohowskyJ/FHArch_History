@@ -29,9 +29,9 @@ $debug = False; // Debug output Ein/Aus Schalter
 // AUTOLOADER für Composer-Klassen laden
 require $path2ROOT . 'vendor/autoload.php';
 
-require $path2ROOT . 'login/Basis/common/BS_FuncsLib.php';
-require $path2ROOT . 'login/Basis/common/FS_CommFuncsLib.php';
-require $path2ROOT . 'login/Basis/common/FS_ConstLib.php';
+require $path2ROOT . 'login/Core/Services/FuncsLib.php';
+require $path2ROOT . 'login/Core/Services/CommFuncsLib.php';
+require $path2ROOT . 'login/Core/Services/ConstLib.php';
 
 $ber = userBerechtigtOK($Zugr);
 # var_dump($ber);
@@ -42,9 +42,9 @@ use Fharch\Core\Database\DB_Benutzer;
 use Fharch\Core\Services\TableColumnMetadata;
 use Fharch\Core\Services\FormRendererFlex;
 
-require $path2ROOT . 'login/common/VF_Comm_Funcs.lib.php';
+# require $path2ROOT . 'login/common/VF_Comm_Funcs.lib.php';
 
-$TABUcss = true;
+
 $header = "";
 HTML_header('Benutzer- Verwaltung', $header, 'Form', '90em'); # Parm: Titel,Subtitel,HeaderLine,Type,width
 

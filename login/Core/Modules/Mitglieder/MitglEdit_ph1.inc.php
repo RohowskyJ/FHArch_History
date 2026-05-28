@@ -42,12 +42,17 @@ if ($neu['mi_m_beitr_bez'] == "") {
 if ($neu['mi_m_abo_bez'] == "") {
     $neu['mi_m_abo_bez'] = NULL;
 }
-
+/*
 unset($neu['phase']);
 unset($neu['list_ID']);
 unset($neu['staat']);
 unset($neu['staat_id']);
-
+*/
+foreach ($neu as $key => $val) {
+    if (substr($key,0,3) != 'mi_') {
+        unset($neu[$key]);
+    }
+}
 $neu['mi_changed_id'] = $_SESSION['BS_Prim']['BE']['be_id'];
 $id = $neu['mi_id'];
 
@@ -147,6 +152,16 @@ if ($neu['mi_id'] == 0) { // Neu anlegen eines Mitglieds- Datensatzes
     $logtext = "Änderungen in fv_mitglieder für " . $neu['mi_name'] . "  " . $neu['mi_vname'] . " " . $mi_neu_id . " \nMitgliedsdaten geändert oder neu angelegt von Benutzer $p_uid ";
     writelog($path2ROOT . "login/logs/MitglLog/Mitgl_aenderg_log", $logtext);
 }
+
+echo "Die Daten wurden gespeichert.<br>";
+echo "Sie werden gleich zurückgeleitet.";
+
+echo '<script>
+    setTimeout(function() {
+        window.location.href = "Mitgllist.php";
+    }, 2000); // 2 Sekunden warten
+</script>';
+exit;
 
 header ("Location: MitglList.php");
 if ($debug) {

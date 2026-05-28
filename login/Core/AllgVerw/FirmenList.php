@@ -47,7 +47,7 @@ $debug = False; // Debug output Ein/Aus Schalter
 require $path2ROOT . 'login/Core/Services/FuncsLib.php';
 require $path2ROOT . 'login/Core/Services/CommFuncsLib.php';
 require $path2ROOT . 'login/Core/Services/ConstLib.php';
-require $path2ROOT . 'login/Core/Services7Logger.php';
+require $path2ROOT . 'login/Core/Services/Logger.php';
 
 $ber = userBerechtigtOK($Zugr);
 
