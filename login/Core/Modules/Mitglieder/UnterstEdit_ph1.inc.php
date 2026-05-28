@@ -8,14 +8,8 @@
  */
 # var_dump($_POST);
 
-/**
- * Includes-Liste
- * enthält alle jeweils includierten Script Files
- */
-$_SESSION[$module]['Inc_Arr'][] = "VS_UnterstEdit_ph1.inc.php"; 
-
 if ($debug) {
-    echo "<pre class=debug>VS_UnterstEdit_ph1.inc.php ist gestarted</pre>";
+    echo "<pre class=debug>UnterstEdit_ph1.inc.php ist gestarted</pre>";
 }
 #var_dump($neu);
 
@@ -52,9 +46,19 @@ if ($neu['fu_id'] == 0) { // Neu anlegen eines Mitglieds- Datensatzes
 
 }
 
-header ("Location: VF_UnterstList.php");
+echo "Die Daten wurden gespeichert.<br>";
+echo "Sie werden gleich zurückgeleitet.";
+
+echo '<script>
+    setTimeout(function() {
+        window.location.href = "UnterstList.php";
+    }, 2000); // 2 Sekunden warten
+</script>';
+exit;
+
+header ("Location: UnterstList.php");
 
 if ($debug) {
-    echo "<pre class=debug>VS_UnterstEdit_ph1.inc.php beendet</pre>";
+    echo "<pre class=debug>UnterstEdit_ph1.inc.php beendet</pre>";
 }
 ?>

@@ -137,10 +137,13 @@ if ($phase == 1) {
         $neu[$name] = $value;
     }
     
-    $uploaddir = $path2ROOT . "data/AOrd_Verz/1/MITGL/";
-   
+    
+   # $uploaddir = $path2ROOT . "login/AOrd_Verz/1/MITGL/";
+    #$webPath = $_SESSION['BS_Prim']['Env']['basePath'] . 
+    $uploaddir = $_SESSION['BS_Prim']['Env']['basePath'] . "/login/AOrd_Verz/1/MITGL/";
+    
     if (! file_exists($uploaddir)) {
-        mkdir($uploaddir);
+        mkdir($uploaddir, 0777, true);
     }
     
     $target1 = "";

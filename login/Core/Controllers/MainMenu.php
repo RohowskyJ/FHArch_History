@@ -22,9 +22,15 @@ register_shutdown_function(function() {
 $module = 'VFH';
 $sub_module = 'IntStart';
 
+# var_dump($_SERVER);
 $Zugr = "ADM-MI";
 
 $_SESSION['BS_Prim']['Mod'] = ['module' => $module, 'smod' => $sub_module, 'caller' => $module];
+
+if (!isset($_SESSION['BS_Prim']['BE'])) {
+    $bPath = $_SESSION['Env']['basePath'];
+    header("location: ../../../VFH/");
+}
 
 $path2ROOT = "../../../";
 

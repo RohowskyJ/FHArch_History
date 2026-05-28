@@ -1,0 +1,72 @@
+
+
+
+
+/*
+Header und Teiler für Menus
+*/
+div.Menu-Header {background-color:#606060;color:white;font-size:0.95em;text-align:center;
+                  padding:0.5em 1em;margin:1em 3em;font-weight:700;border-radius:4px;width:92%;}
+div.Menu-Separator {background-color:#cacaca;height:1.5em;width:100%;margin:1em 0;}
+div.Menu-line {background-color:white;width:100%;}
+
+/*
+1. CSS für besseres Druckformat
+Dieses CSS optimiert die Druckansicht, indem es unnötige Elemente ausblendet, Schriftgrößen anpasst und Tabellen für den Druck optimiert.
+*/
+/* Druck-spezifische Styles */
+@media print {
+    /* Verstecke Navigation und andere nicht relevante Elemente */
+    nav, .no-print, .btn, footer {
+        display: none !important;
+    }
+    
+    /* Schriftgröße und Zeilenhöhe für bessere Lesbarkeit */
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+    }
+    
+    /* Tabellen für Druck optimieren */
+    table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        page-break-inside: avoid;
+    }
+    
+    th, td {
+        border: 1px solid #000 !important;
+        padding: 6px 8px !important;
+        text-align: left;
+        vertical-align: top;
+    }
+    
+    /* Überschriften anpassen */
+    h1, h2, h3 {
+        color: #000;
+        page-break-after: avoid;
+    }
+    
+    /* Verhindere Seitenumbruch innerhalb von Tabellenzeilen */
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    
+    /* Links als Text anzeigen */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+        color: #555;
+    }
+}
+/*
+Anwendung: Füge diesen CSS-Code in deine Haupt-CSS-Datei ein oder direkt im <head> deiner HTML-Seite:
+
+<style>
+/ * ... oben stehender CSS-Code ... * /
+</style>
+*/

@@ -33,19 +33,20 @@ require $path2ROOT . 'login/Core/Services/ConstLib.php';
 
 $debug = False; // Debug output Ein/Aus Schalter
 
-require $path2ROOT . 'login/common/VF_Comm_Funcs.lib.php';
+#require $path2ROOT . 'login/common/VF_Comm_Funcs.lib.php';
 
 $ber = userBerechtigtOK($Zugr);
 
+require_once __DIR__ . '/../../../vendor/autoload.php';
+
 use FhArch\Core\Database\DB_GenericLog;
-require $path2ROOT . "Src/Core/Database/DB_GenericLog.php";
+require $path2ROOT . "login/Core/Database/DB_GenericLog.php";
 
 $title = "E-Mail- Empfänger für automatische E-Mails ";
 
 $ListHead = "Admin- E_Mail Verwaltung - Administrator ";
 $title = "Admin- E_Mail- Daten";
 
-$TABUcss = true;
 HTML_header($title, '', 'Admin', '90em'); # Parm: Titel,Subtitel,HeaderLine,Type,width
 
 initial_debug('GET','POST');
@@ -70,7 +71,7 @@ echo "<input type='hidden' id='srch_Id' value=''>";
 $list_ID = 'EMA';
 $lTitel = ["Alle" => "Alle E-Mail- Ziele "];
 
-require $path2ROOT . 'src/Core/Services/ListFuncsLib.php';
+require $path2ROOT . 'login/Core/Services/ListFuncsLib.php';
 
 HTML_trailer();
 

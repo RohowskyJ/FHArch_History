@@ -405,7 +405,7 @@ const VF_Ausz = array(
     
 );
 
-const VF_Aermelabz_text  = array('TE' => 'Spezielle Beschreibung notwendig',
+const Aermelabz_text  = array('TE' => 'Spezielle Beschreibung notwendig',
     'BR' => 'Ärmelabzeichen für die Braune Uniform',
     'BB' => 'Ärmelabzeichen für die Braune oder Blaue Uniform',
     'BG' => 'Ärmelabzeichen für die Braune oder Grüne Uniform',
@@ -417,7 +417,7 @@ const VF_Aermelabz_text  = array('TE' => 'Spezielle Beschreibung notwendig',
     'XX' => 'Noch nicht näher bestimmte Verwendung'
 );
 
-const VF_Stifter = array('  ' => 'keine Definition',
+const Stifter = array('  ' => 'keine Definition',
     'LA' => 'Land, Staat, Gemeinde - Ziviler Stifter',
     'LF' => 'Feuerwehr als Stifter (LF- Bez-, FF- KDO)'
 );
@@ -426,7 +426,7 @@ const VF_Stifter = array('  ' => 'keine Definition',
  * Öffentlichkeitsarbeit
  *
  */
-const VF_Arc_Type = array(
+const Arc_Type = array(
     'AU' => 'Ausweis, Pass'
     ,'DO' => 'Dokument'
     ,'EI' => 'Einladung'
@@ -489,6 +489,7 @@ const AudioFiles = array("mp3", "aac", "wav"); // 09/02
 const SubMod_Dirs = array(
     'AN' => 'Biete_Suche',
     'BU' => 'Buch',
+    'MP' =>  'Marktplatz',
     'MUS' =>  'Museen',
     'PR'  =>  'Presse',
     'TE'  =>  'Termine',

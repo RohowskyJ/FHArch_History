@@ -54,7 +54,7 @@ use Fharch\Core\Services\FormRendererFlex;
 /* Für Installation: Zugriffberechtigung aushebenln : im Inst-Script $_SESS setzen */
 $ber = userBerechtigtOK($Zugr);
 if (!$ber) {
-    header("Location $path2ROOT/public/");
+    header("Location $path2ROOT/VFH/");
 }
 
 console_log('proj start');
@@ -110,8 +110,8 @@ if (mb_strtolower($srv) === "feuerwehrhistoriker.at" || mb_strtolower($srv) === 
 if ($phase == 0) {
 
 
-    if (is_file($path2ROOT . 'config/'. $cfg)) {
-        $ini_arr = parse_ini_file($path2ROOT.'config/'.$cfg, true, INI_SCANNER_NORMAL);
+    if (is_file($path2ROOT . 'login/config/'. $cfg)) {
+        $ini_arr = parse_ini_file($path2ROOT.'login/config/'.$cfg, true, INI_SCANNER_NORMAL);
 
         $neu['c_Institution'] = $ini_arr["Config"]['inst'];
         $neu['c_Vereinsreg'] = $ini_arr["Config"]['vreg'];
@@ -135,17 +135,17 @@ if ($phase == 0) {
            
     } else {
         $neu['c_Incstitution'] = "Organisations- Bezeichnung";
-        $neu['c_Vereinsreg'] = 'Vereinsreg- Nummer';
+        $neu['c_Vereinsreg'] = 'Vereinsreg-Nr';
         $neu['c_Eignr'] = 'Eigentümer- Nummer';
         $neu['c_Verantwortl'] = 'Name des Verantwortlichen';
         $neu['c_email'] = 'email@verantwortl.cc';
-        $neu['c_Ver_Tel'] = '+43 - Tel-Nr des Verantwortlichen';
+        $neu['c_Ver_Tel'] = '+43 - Tel-Nr des Verantw.';
         $neu['c_mode'] = 'Single';
         $neu['c_Wartung'] = 'N';
         $neu['c_Wart_Grund'] = "";
         $neu['c_bild_1'] = 'Signet.jpg';
         $neu['c_bild_2'] = 'Bild_1_Seite.png';
-        $neu['c_Homepage'] = 'https://www.homepage-Name.at';
+        $neu['c_Homepage'] = 'https://www.homepage-Name.xy';
         $neu['c_ptyp']  = "";
         $neu['c_store']  = "AOrd_Verz";
         $neu['c_def_pw']  = "defaultPW";

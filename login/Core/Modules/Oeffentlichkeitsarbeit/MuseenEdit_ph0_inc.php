@@ -84,7 +84,6 @@ if (!$editProtect) {
     AutoCompForm_Bdld('$st');
 }
 
-
 echo $forms->renderTextLikeFieldFlex('mu_eigner', 50);
 if (!$editProtect) {
     #AutoCompForm_Eigent('E');

@@ -8,3 +8,8 @@
 61 mi_id 222 action cancel field M_0 uid 1  year 2026
 61 mi_id 136 action pay field M_0 uid 1  year 2026
 61 mi_id 136 action cancel field M_0 uid 1  year 2026
+61 mi_id 86 action pay field A_0 uid 1  year 2026
+61 mi_id 86 action cancel field A_0 uid 1  year 2026
+61 mi_id 86 action pay field A_0 uid 1  year 2026
+61 mi_id 86 action cancel field A_0 uid 1  year 2026
+61 mi_id 86 action cancel field A_0 uid 1  year 2026

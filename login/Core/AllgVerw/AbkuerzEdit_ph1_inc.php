@@ -32,7 +32,7 @@ if ($neu['ab_id'] == "0") {
     
 }
 
-header ('Location: VS_AbkuerzList.php');
+header ('Location: AbkuerzList.php');
 
 if ($debug) {
     echo "<pre class=debug>AbkuerzEdit_ph1_inc.php beendet</pre>";

@@ -55,7 +55,6 @@ use Fharch\Core\Services\TableColumnMetadata;
 use Fharch\Core\Services\FormRendererFlex;
 use Fharch\Core\Modules\Oeffentlichkeitsarbeit\API\DB_Oeffentlich;
 
-$TABUcss = true;
 $header = "";
 HTML_header('Museen', $header, 'Form', '90em'); # Parm: Titel,Subtitel,HeaderLine,Type,width
 
@@ -96,12 +95,12 @@ if (isset($_POST['phase'])) {
     $phase = 0;
 }
 if (isset($_GET['ID'])) {
-    $mu_id = $_GET['ID'];
+    $mu_id = intval($_GET['ID']);
 } else {
-    $mu_id = "";
+    $mu_id = 0;
 }
 if (isset($_POST['mu__id'])) {
-    $mu_id = $_POST['mu_id'];
+    $mu_id = intval($_POST['mu_id']);
 }
 
 # -------------------------------------------------------------------------------------------------------
@@ -150,7 +149,7 @@ if ($phase == 1) {
  
     date_default_timezone_set('Europe/Berlin');
     
-    $neu['zt_changed_id'] = $_SESSION['BS_Prim']['BE']['be_id'];
+    $neu['mu_changed_id'] = $_SESSION['BS_Prim']['BE']['be_id'];
 
     if ($neu['staat_id'] != '') {
         $neu['mu_staat'] = $neu['staat_id'];

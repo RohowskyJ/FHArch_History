@@ -89,3 +89,52 @@
 [2026-05-05 06:01:31] 40 PDO {}
 [2026-05-05 06:01:31] 74 Kommentare []  
 [2026-05-05 06:01:31] Tabtitles [{"title":"Aktion","field":"action","width":6,"hozAlign":"center","headerSort":false,"formatter":"html"},{"title":"Fortl. Nr.","field":"me_id","headerFilter":"input","formatter":"plaintext"},{"title":"Ehrung","field":"me_ehrung","headerFilter":"input","formatter":"plaintext"},{"title":"Verleihungs- Datum","field":"me_eh_datum","headerFilter":"input","formatter":"plaintext"},{"title":"Begr\u00fcndung","field":"me_begruendg","headerFilter":"input","formatter":"plaintext"},{"title":"Bild 1","field":"me_bild1","headerFilter":"input","formatter":"html"}]
+[2026-05-26 13:52:32] 34 listType Alle
+[2026-05-26 13:52:32] 35 PDO {}
+[2026-05-26 13:52:32] 37 PDO object: \PDO::__set_state(array(
+))
+[2026-05-26 13:52:32] 40 PDO {}
+[2026-05-26 13:52:32] 74 Kommentare []  
+[2026-05-26 13:52:32] Tabtitles [{"title":"Aktion","field":"action","width":6,"hozAlign":"center","headerSort":false,"formatter":"html"},{"title":"Fortl. Nr.","field":"me_id","headerFilter":"input","formatter":"plaintext"},{"title":"Ehrung","field":"me_ehrung","headerFilter":"input","formatter":"plaintext"},{"title":"Verleihungs- Datum","field":"me_eh_datum","headerFilter":"input","formatter":"plaintext"},{"title":"Begr\u00fcndung","field":"me_begruendg","headerFilter":"input","formatter":"plaintext"},{"title":"Bild 1","field":"me_bild1","headerFilter":"input","formatter":"html"}]
+[2026-05-27 15:22:18] 34 listType Alle
+[2026-05-27 15:22:18] 35 PDO {}
+[2026-05-27 15:22:18] 37 PDO object: \PDO::__set_state(array(
+))
+[2026-05-27 15:22:18] 40 PDO {}
+[2026-05-27 15:22:18] 74 Kommentare []  
+[2026-05-27 15:22:18] Tabtitles [{"title":"Aktion","field":"action","width":6,"hozAlign":"center","headerSort":false,"formatter":"html"},{"title":"Fortl. Nr.","field":"me_id","headerFilter":"input","formatter":"plaintext"},{"title":"Ehrung","field":"me_ehrung","headerFilter":"input","formatter":"plaintext"},{"title":"Verleihungs- Datum","field":"me_eh_datum","headerFilter":"input","formatter":"plaintext"},{"title":"Begr\u00fcndung","field":"me_begruendg","headerFilter":"input","formatter":"plaintext"},{"title":"Bild 1","field":"me_bild1","headerFilter":"input","formatter":"html"}]
+[2026-05-27 15:29:56] 34 listType Alle
+[2026-05-27 15:29:56] 35 PDO {}
+[2026-05-27 15:29:56] 37 PDO object: \PDO::__set_state(array(
+))
+[2026-05-27 15:29:56] 40 PDO {}
+[2026-05-27 15:29:56] 74 Kommentare []  
+[2026-05-27 15:29:56] Tabtitles [{"title":"Aktion","field":"action","width":6,"hozAlign":"center","headerSort":false,"formatter":"html"},{"title":"Fortl. Nr.","field":"me_id","headerFilter":"input","formatter":"plaintext"},{"title":"Ehrung","field":"me_ehrung","headerFilter":"input","formatter":"plaintext"},{"title":"Verleihungs- Datum","field":"me_eh_datum","headerFilter":"input","formatter":"plaintext"},{"title":"Begr\u00fcndung","field":"me_begruendg","headerFilter":"input","formatter":"plaintext"},{"title":"Bild 1","field":"me_bild1","headerFilter":"input","formatter":"html"}]
+[2026-05-27 15:32:29] 34 listType Alle
+[2026-05-27 15:32:29] 35 PDO {}
+[2026-05-27 15:32:29] 37 PDO object: \PDO::__set_state(array(
+))
+[2026-05-27 15:32:29] 40 PDO {}
+[2026-05-27 15:32:29] 74 Kommentare []  
+[2026-05-27 15:32:29] Tabtitles [{"title":"Aktion","field":"action","width":6,"hozAlign":"center","headerSort":false,"formatter":"html"},{"title":"Fortl. Nr.","field":"me_id","headerFilter":"input","formatter":"plaintext"},{"title":"Ehrung","field":"me_ehrung","headerFilter":"input","formatter":"plaintext"},{"title":"Verleihungs- Datum","field":"me_eh_datum","headerFilter":"input","formatter":"plaintext"},{"title":"Begr\u00fcndung","field":"me_begruendg","headerFilter":"input","formatter":"plaintext"},{"title":"Bild 1","field":"me_bild1","headerFilter":"input","formatter":"html"}]
+[2026-05-27 15:32:33] 34 listType Alle
+[2026-05-27 15:32:33] 35 PDO {}
+[2026-05-27 15:32:33] 37 PDO object: \PDO::__set_state(array(
+))
+[2026-05-27 15:32:33] 40 PDO {}
+[2026-05-27 15:32:33] 74 Kommentare []  
+[2026-05-27 15:32:33] Tabtitles [{"title":"Aktion","field":"action","width":6,"hozAlign":"center","headerSort":false,"formatter":"html"},{"title":"Fortl. Nr.","field":"me_id","headerFilter":"input","formatter":"plaintext"},{"title":"Ehrung","field":"me_ehrung","headerFilter":"input","formatter":"plaintext"},{"title":"Verleihungs- Datum","field":"me_eh_datum","headerFilter":"input","formatter":"plaintext"},{"title":"Begr\u00fcndung","field":"me_begruendg","headerFilter":"input","formatter":"plaintext"},{"title":"Bild 1","field":"me_bild1","headerFilter":"input","formatter":"html"}]
+[2026-05-27 15:44:48] 34 listType Alle
+[2026-05-27 15:44:48] 35 PDO {}
+[2026-05-27 15:44:48] 37 PDO object: \PDO::__set_state(array(
+))
+[2026-05-27 15:44:48] 40 PDO {}
+[2026-05-27 15:44:48] 74 Kommentare []  
+[2026-05-27 15:44:48] Tabtitles [{"title":"Aktion","field":"action","width":6,"hozAlign":"center","headerSort":false,"formatter":"html"},{"title":"Fortl. Nr.","field":"me_id","headerFilter":"input","formatter":"plaintext"},{"title":"Ehrung","field":"me_ehrung","headerFilter":"input","formatter":"plaintext"},{"title":"Verleihungs- Datum","field":"me_eh_datum","headerFilter":"input","formatter":"plaintext"},{"title":"Begr\u00fcndung","field":"me_begruendg","headerFilter":"input","formatter":"plaintext"},{"title":"Bild 1","field":"me_bild1","headerFilter":"input","formatter":"html"}]
+[2026-05-27 15:45:18] 34 listType Alle
+[2026-05-27 15:45:18] 35 PDO {}
+[2026-05-27 15:45:18] 37 PDO object: \PDO::__set_state(array(
+))
+[2026-05-27 15:45:18] 40 PDO {}
+[2026-05-27 15:45:18] 74 Kommentare []  
+[2026-05-27 15:45:18] Tabtitles [{"title":"Aktion","field":"action","width":6,"hozAlign":"center","headerSort":false,"formatter":"html"},{"title":"Fortl. Nr.","field":"me_id","headerFilter":"input","formatter":"plaintext"},{"title":"Ehrung","field":"me_ehrung","headerFilter":"input","formatter":"plaintext"},{"title":"Verleihungs- Datum","field":"me_eh_datum","headerFilter":"input","formatter":"plaintext"},{"title":"Begr\u00fcndung","field":"me_begruendg","headerFilter":"input","formatter":"plaintext"},{"title":"Bild 1","field":"me_bild1","headerFilter":"input","formatter":"html"}]

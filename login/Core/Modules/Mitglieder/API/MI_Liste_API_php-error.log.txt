@@ -69,3 +69,39 @@
 )
 
 [05-May-2026 06:01:26 UTC] Suchparameter: ''
+[26-May-2026 13:47:53 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo:protected] => PDO Object
+        (
+        )
+
+)
+
+[26-May-2026 13:47:53 UTC] Suchparameter: ''
+[26-May-2026 13:52:29 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo:protected] => PDO Object
+        (
+        )
+
+)
+
+[26-May-2026 13:52:29 UTC] Suchparameter: ''
+[26-May-2026 13:53:12 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo:protected] => PDO Object
+        (
+        )
+
+)
+
+[26-May-2026 13:53:12 UTC] Suchparameter: ''
+[27-May-2026 15:22:16 UTC] Repo Objekt: Fharch\Core\Modules\Mitglieder\API\MI_MemberRepository Object
+(
+    [pdo:protected] => PDO Object
+        (
+        )
+
+)
+
+[27-May-2026 15:22:16 UTC] Suchparameter: ''

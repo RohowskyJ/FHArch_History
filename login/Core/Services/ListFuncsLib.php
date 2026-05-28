@@ -5,6 +5,11 @@
  * Hier sid die Daten für Formular definiert
  */
 # var_dump($lTitel);
+
+$proj = $proj ?? "";
+
+echo "<input type='hidden' id='proj' name='proj' value='$proj'>"; // Projekt AERM EHRG
+
 echo "<input type='hidden' id='list_ID' name='list_ID' value='$list_ID'>";
 
 $cust_ID = isset($cust_ID) ? $cust_ID : "";
@@ -210,6 +215,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const listName = document.getElementById('list_ID')?.value || null;
     const search = document.getElementById('srch_Id')?.value || "";
     const selectElement = document.getElementById('list-selector');
+    const projElement = document.getElementById('proj');
 
     if (!listName) {
         console.error("Element #list_ID nicht gefunden");
@@ -225,6 +231,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     let selectedList = selectElement.value;
     console.log("Ausgewählte Liste:", selectedList);
+    
+    let projValue = projElement.value;
 
     // Tabulator initialisieren
     const table = new Tabulator("#" + listName + "-table", {
@@ -236,6 +244,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Add it to the params object with the key expected by your API (e.g., 'cust_ID')
             params.cust_ID = customValue;
+            params.proj_ID = projValue;
             
             // Build the full URL with all parameters
             const query = new URLSearchParams(params).toString();
