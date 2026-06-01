@@ -25,7 +25,7 @@ register_shutdown_function(function() {
     } else {
         error_log('Composer autoload not found: ' . $composerAutoload);
     }
-    
+   # error_log(__LINE__ . " get " . implode("; ", $_GET) );
 use Fharch\Core\Database\DB_GenericLog;
 use Fharch\Core\Modules\Mitglieder\API\MIB_MemberRepository;
 use Fharch\Core\Modules\Mitglieder\API\MIB_MemberTableConfig;
@@ -34,16 +34,16 @@ use Fharch\Core\Modules\Mitglieder\API\MIB_MemberTableConfig;
 ob_start();
 
 header('Content-Type: application/json; charset=utf-8');
-
+#var_dump($_GET);
 try {
     $DBD = new DB_GenericLog();
     $pdo = $DBD->getPDO();
     $repo = new MIB_MemberRepository($pdo);
-
+#error_log(__LINE__ . " get " . implode("; ", $_GET) );
     // Parameter aus GET oder POST
     $listType = $_GET['T_List'] ?? 'Alle';
     $search = $_GET['search'] ?? null;
-    
+    error_log(' search $search');
     $data = $repo->getMembers($listType, $search);
     $columns = MIB_MemberTableConfig::getColumns($listType, $pdo);
     

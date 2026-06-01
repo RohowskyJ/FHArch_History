@@ -22,7 +22,7 @@ class MI_MemberTableConfig {
      * @return array
      */
 
-    private static string $logFile = "MemberTableConfig_debug.log.txt";
+    private static string $logFile = "MI_MemberTableConfig_debug.log.txt";
     
     public static function getColumns(string $listType, PDO $pdo): array {
         /*

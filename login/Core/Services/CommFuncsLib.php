@@ -424,12 +424,18 @@ function Multi_Foto(array $Picts, $sub_funct = '')
 {
     global $debug, $db, $neu, $module, $pict_path, $Tabellen_Spalten_COMMENT ;
     
+    /*
+     * noch verwendet in 
+     * MitglEhrung
+     * DokuEdit
+     * 
+     */
     if ($debug) {
         echo "<pre class=debug>VF_Mult_ L Beg: \$Picts ";
         var_dump($Picts);
         echo "<pre>";
     }
-    
+    # var_dump($Picts);
     $pic_cnt = count($Picts);
     
     # echo "<tr><td colspan='2'>";
@@ -513,21 +519,21 @@ function Multi_Foto(array $Picts, $sub_funct = '')
 function userBerechtigtOK ($berechtigung) {
     global $path2ROOT;
     
-    $message = __FILE__ . " " . __LINE__ . " Berechtigung $berechtigung";
-    file_put_contents('userber_error.log.txt', $message, FILE_APPEND);
+    #$message = __FILE__ . " " . __LINE__ . " Berechtigung $berechtigung";
+   #file_put_contents('userber_error.log.txt', $message, FILE_APPEND);
    
     if ($berechtigung == "Alle" ) {
         return true;
     }
-    $message = __FILE__ . " " . __LINE__ . " allesOK";
+    #$message = __FILE__ . " " . __LINE__ . " allesOK";
     if (isset($_SESSION['BS_Prim']['BE']['be_id']) && $_SESSION['BS_Prim']['BE']['be_id'] >= 1 && $_SESSION['BS_Prim']['BE']['roles'] != "") {   
         if (!userHasRole($berechtigung) ) {
             echo "Für diesen Programmteil besteht keine Berechtgung.<br>";
             echo "<a href='" . $path2ROOT . "login/Core/Controllers/MainMenu.php > Zurück zum Anfang </a>";
-            $message = __FILE__ . " " . __LINE__ . " Für diesen Programmteil besteht keine Berechtgung.";
+            #$message = __FILE__ . " " . __LINE__ . " Für diesen Programmteil besteht keine Berechtgung.";
             
         }
-        file_put_contents('userber_error.log.txt', $message, FILE_APPEND);
+        #file_put_contents('userber_error.log.txt', $message, FILE_APPEND);
         return true;
     } else {
         echo "Für diesen Programmteil besteht keine Berechtgung.<br>";
@@ -601,7 +607,7 @@ function UploadForm_M()
      $hide_area_group1 = $hide_area_group2 = $hide_area;
      */
     if ($debug) {
-        echo "<pre class=debug>UploadForm_M L 2262 Beg: \$Picts ";
+        echo "<pre class=debug>UploadForm_M ". __LINE__ ." Beg: \$Picts ";
         var_dump($_SESSION[$module]['Pct_Arr']);
         echo "<pre>";
     }
@@ -797,7 +803,7 @@ function UploadForm_M()
                  <?php
                  $subMod = $module."|".$sub_mod;
                  echo "<input type='hidden' id='subMod' value='$subMod' >";
-                 if ($module != 'OEF' || ($module == 'OEF' && ($sub_mod == 'AN' || $sub_mod == 'BU' || $sub_mod == 'MUS' || $sub_mod == 'PR' || $sub_mod == 'TE'))) {
+                 if ($module != 'OEF' || ($module == 'OEF' && ($sub_mod == 'MP' || $sub_mod == 'BU' || $sub_mod == 'MUS' || $sub_mod == 'PR' || $sub_mod == 'TE'))) {
                      AutoCompForm_Eigent('U', false,$j);
                      
                      echo "<div class='Menu-Separator'> Aufnahme- Datum (Ziel- Pfad der Bilder erweitern mit Anhang möglich)</div>";

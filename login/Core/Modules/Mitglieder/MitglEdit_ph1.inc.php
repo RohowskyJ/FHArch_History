@@ -158,7 +158,7 @@ echo "Sie werden gleich zurückgeleitet.";
 
 echo '<script>
     setTimeout(function() {
-        window.location.href = "Mitgllist.php";
+        window.location.href = "MitglList.php";
     }, 2000); // 2 Sekunden warten
 </script>';
 exit;

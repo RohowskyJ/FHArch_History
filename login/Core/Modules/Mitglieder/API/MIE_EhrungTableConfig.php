@@ -2,7 +2,7 @@
 
 namespace Fharch\Core\Modules\Mitglieder\API;
 
-use PDO;
+use \PDO;
 use Fharch\Core\Services\TableColumnMetadata;
 
 /** 
@@ -23,7 +23,7 @@ class MIE_EhrungTableConfig {
 
     private static string $logFile = "MIE_TableConfig_debug.log.txt";
     
-    public static function getColumns(string $listType, PDO $pdo): array {
+    public static function getColumns(string $listType, \PDO $pdo): array {
         /*
         $vfDatabase = VF_Database::getInstance();
         $vfDatabase->setPrefix('fv_');
@@ -31,6 +31,7 @@ class MIE_EhrungTableConfig {
         */
 
         $json = json_encode($pdo);
+        /*
         self::log(__LINE__ . " listType $listType");
         self::log(__LINE__ . " PDO $json");
         # self::log(__LINE__ . " VF_Database instance: " . var_export($vfDatabase, true));
@@ -38,7 +39,7 @@ class MIE_EhrungTableConfig {
         
         $json = json_encode($pdo);
         self::log(__LINE__ . " PDO $json");
-
+*/
         $sortNo = []; // nicht zu sortierende Spalten
         $hideNo = []; // nicht versteckbare Spalten
         $editable = []; // editierbare Spalten
@@ -58,7 +59,10 @@ class MIE_EhrungTableConfig {
             "me_changed_id" => "Geändert von", "me_changed_at" => "Geändert am"
         ];       
         
-        switch ($listType) {     
+        switch ($listType) {  
+            case "Mitgl":
+                $showCols = [ "me_id", "mi_id", "me_ehrung", "me_eh_datum",  "me_begruendg", "me_bild1", "me_bild2", "me_bild3", "me_bild4"]; 
+                break;
             case "Alle":
             default: 
                 $showCols = [ "me_id", "me_ehrung", "me_eh_datum",  "me_begruendg", "me_bild1"]; //  , "me_bild2"
@@ -71,7 +75,7 @@ class MIE_EhrungTableConfig {
         $colLength = $meta->getMaxLengthsMap();
        
         $json = json_encode($colComment);
-        self::log( __LINE__ . " Kommentare $json  ");
+        #self::log( __LINE__ . " Kommentare $json  ");
         
         $TabTitles[] = ["title" => "Aktion", "field" => "action", "width" =>  6 , "hozAlign" => "center",  "headerSort" => false ,  "formatter" => "html"];
         foreach ($showCols as $fldName ) { 
@@ -88,14 +92,16 @@ class MIE_EhrungTableConfig {
                 $format =   "html" ;
             }
             if (stripos($fldName, '_bild')) {
-                $TabTitles[] = ["title" => $titel, "field" => $fldName,  "headerFilter" => "input", "formatter" => 'html'];
+                $TabTitles[] = ["title" => $titel, "field" => $fldName,  "headerFilter" => false, "headerSort" => false ,"formatter" => 'html'];
+            } elseif (stripos($fldName, 'me_begruendg')) {
+                $TabTitles[] = ["title" => $titel, "field" => $fldName,  "headerFilter" => "input", "formatter" => 'html' ];
             } else {
-                $TabTitles[] = ["title" => $titel, "field" => $fldName,  "headerFilter" => "input", "formatter" => $format ];
+                $TabTitles[] = ["title" => $titel, "field" => $fldName,  "headerFilter" => "false", "formatter" => $format ];
             }
 
         }
         $json = json_encode($TabTitles);
-        self::log("Tabtitles $json");
+        # self::log("Tabtitles $json");
         
         return $TabTitles;
     }

@@ -36,13 +36,11 @@ if ($debug) {
  *
  * input Felder für die PHP Error- Log-Datei und die Debug-Datei nach dem <Form Statement eingefügt (id='cPError und cPdebug )
  *
- *
- * $module_css.php  enthält die benötigten Definitione für die .css Dateien
  *  
  * @param string $title
  *            <title> tag text
  * @param string $head
- *            zusätzliche <head> Zeilen. Auch <style>......</style
+ *            zusätzliche <head> Zeilen. Auch <style>......</style> möglich
  * @param string $type
  *            Form der Seite
  *             == Form Ausgabe <body><fieldset><header</Fieldset><fieldset> aus
@@ -134,6 +132,9 @@ function HTML_header($title, $head = '', $type = 'Form', $width = '90em')
     echo " <link rel='stylesheet' href='" . $path2ROOT . "VFH/css/opPopOver.css' type='text/css'>";
     
     echo " <link rel='stylesheet' href='" . $path2ROOT . "VFH/css/FormsFlex.css' type='text/css'>";
+    
+    echo " <link rel='stylesheet' href='" . $path2ROOT . "VFH/css/accordion.css' type='text/css'>";
+    echo " <link rel='stylesheet' href='" . $path2ROOT . "VFH/css/toggle.css' type='text/css'>";
 /*
     if (strpos($caller,'Edit') >= 1 || strpos($caller,'M_Anmeld') >= 1 ) {
         echo " <link rel='stylesheet' href='" . $path2ROOT . "VFH/css/FormsFlex.css' type='text/css'>";

@@ -58,7 +58,7 @@ register_shutdown_function(function() {
     $changed_id = intval($data['changed_id']);
     $year = isset($data['year']) ? intval($data['year']) : null;
     
-    file_put_contents($debug_log_file, __LINE__ . " mi_id $mi_id action $action field $field uid $changed_id  year $year\n", FILE_APPEND);
+    # file_put_contents($debug_log_file, __LINE__ . " mi_id $mi_id action $action field $field uid $changed_id  year $year\n", FILE_APPEND);
     
     $allowedActions = ['pay', 'cancel'];
     if (!in_array($action, $allowedActions)) {

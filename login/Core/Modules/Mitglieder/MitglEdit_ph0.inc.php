@@ -119,7 +119,7 @@ echo "<p><a href='MitglList.php'>Zurück zur Liste</a></p>";
 echo "<script type='text/javascript' src='" . $path2ROOT . "public/js/AutoComp_Staat.js' ></script>";
 
 echo "<div class='w3-container'><fieldset> <label> Auszeichnungs- Details: </label><br/>";
-require 'MitglEhrgList.inc.php';
+require 'MitglEhrgList_inc.php';
 echo "</fieldset></div>";
 
 # =========================================================================================================

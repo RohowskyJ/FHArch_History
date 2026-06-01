@@ -114,6 +114,7 @@ class MIB_MemberTableConfig {
                             ["title" => "MB Bez",
                                 "field" => "M_1",
                                 "hozAlign" => "center",
+                                "responsive" => 2,
                                 "headerSort" => false, 
                                 "editor" => false, // Nicht direkt editierbar, Klick-Handler nutzen
                                 "formatter" => "paymentFormatter"
@@ -121,6 +122,7 @@ class MIB_MemberTableConfig {
                             [ "title" => "Abo Bez",
                                 "field" => "A_1",
                                 "hozAlign" => "center",
+                                "responsive" => 2,
                                 "headerSort" => false, 
                                 "editor" => false, // Nicht direkt editierbar, Klick-Handler nutzen
                                 "formatter" => "paymentFormatter"
@@ -134,6 +136,7 @@ class MIB_MemberTableConfig {
                             ["title" => "MB Bez",
                                 "field" => "M_0",
                                 "hozAlign" => "center",
+                                "responsive" => 0,
                                 "headerSort" => false, 
                                 "editor" => false, // Nicht direkt editierbar, Klick-Handler nutzen
                                 "formatter" => "paymentFormatter"
@@ -141,6 +144,7 @@ class MIB_MemberTableConfig {
                             ["title" => "Abo Bez",
                                 "field" => "A_0",
                                 "hozAlign" => "center",
+                                "responsive" => 0,
                                 "headerSort" => false, 
                                 "editor" => false, // Nicht direkt editierbar, Klick-Handler nutzen
                                 "formatter" => "paymentFormatter"
@@ -148,6 +152,7 @@ class MIB_MemberTableConfig {
                             ["title" => "MB + Abo Bez",
                                 "field" => "MA_0",
                                 "hozAlign" => "center",
+                                "responsive" => 0,
                                 "headerSort" => false,
                                 "editor" => false, // Nicht direkt editierbar, Klick-Handler nutzen
                                 "formatter" => "paymentFormatter"
@@ -165,6 +170,7 @@ class MIB_MemberTableConfig {
                             ["title" => "MB Bez",
                                 "field" => "M_p",
                                 "hozAlign" => "center",
+                                "responsive" => 3,
                                 "headerSort" => false, 
                                 "editor" => false, // Nicht direkt editierbar, Klick-Handler nutzen
                                 "formatter" => "paymentFormatter"
@@ -172,6 +178,7 @@ class MIB_MemberTableConfig {
                             ["title" => "Abo Bez",
                                 "field" => "A_p",
                                 "hozAlign" => "center",
+                                "responsive" => 3,
                                 "headerSort" => false, 
                                 "editor" => false, // Nicht direkt editierbar, Klick-Handler nutzen
                                 "formatter" => "paymentFormatter"
@@ -179,6 +186,7 @@ class MIB_MemberTableConfig {
                             ["title" => "MB + Abo Bez",
                                 "field" => "MA_p",
                                 "hozAlign" => "center",
+                                "responsive" => 3,
                                 "headerSort" => false, 
                                 "editor" => false, // Nicht direkt editierbar, Klick-Handler nutzen
                                 "formatter" => "paymentFormatter"

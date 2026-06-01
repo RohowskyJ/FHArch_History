@@ -10,7 +10,7 @@ register_shutdown_function(function() {
         $message = "Shutdown error detected:\n" . print_r($error, true);
         error_log($message);
         // Optional: auch in eine separate Datei schreiben
-        file_put_contents(__DIR__ . '/fatal_error.log', $message, FILE_APPEND);
+        file_put_contents(__DIR__ . '/MI_fatal_error.log', $message, FILE_APPEND);
     }
 });
     

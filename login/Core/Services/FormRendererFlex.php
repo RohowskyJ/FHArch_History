@@ -92,8 +92,8 @@ final class FormRendererFlex
         
         // Debug-Ausgabe (temporär)
         // Debug-Ausgabe in eigene Logdatei
-        error_log("renderLabel called with fieldName='$fieldName', fallback='$fallback'\n", 3, __DIR__ . '/formflex_log.log');
-        error_log("Comments map: " . print_r($comments, true) . "\n", 3, __DIR__ . '/formflex_log.log');
+        #error_log("renderLabel called with fieldName='$fieldName', fallback='$fallback'\n", 3, __DIR__ . '/formflex_log.log');
+        #error_log("Comments map: " . print_r($comments, true) . "\n", 3, __DIR__ . '/formflex_log.log');
         
         if ($fallback !== '') {
             $label = $fallback;

@@ -56,14 +56,14 @@ try {
     $data = $repo->getMembers($listType, $search);
     $columns = MI_MemberTableConfig::getColumns($listType, $pdo);
     
-    error_log("Columns: " . print_r($columns, true));
+    # error_log(__FILE__ . " " . __LINE__ . " Columns: " . print_r($columns, true));
     
     $response = [
         'columns' => $columns,
         'data' => $data,
     ];
     
-    error_log("Response Array: " . print_r($response, true));
+    error_log(__FILE__ . " " . __LINE__ . " Response Array: " . print_r($response, true));
     
     $json = json_encode($response);
     

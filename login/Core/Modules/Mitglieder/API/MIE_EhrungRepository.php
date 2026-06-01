@@ -26,7 +26,12 @@ class MIE_EhrungRepository {
         $sql = "SELECT * FROM fv_mi_ehrung";
         $where = [];
         $params = [];
-        $orderBy = "ORDER BY me_id"; // Default order
+        if ($listType == 'Alle') {
+            $orderBy = "ORDER BY me_id"; // Default order
+        } else {
+            $orderBy = "ORDER BY me_eh_datum"; // Default order
+        }
+        
         
         // Filter by mi_id if $search is numeric
         if ($search !== null && is_numeric($search)) {
@@ -72,25 +77,28 @@ class MIE_EhrungRepository {
         */
         $me_id = $row['me_id'] ?? 0;
         $row['action'] = "<a href='MitglEhrgEdit.php?ID={$me_id}'>Edit</a>";
+
+        // Absoluter Dateisystempfad zum Bild (für PHP-Funktionen)
+        $filePath = $_SERVER['DOCUMENT_ROOT'].'/FHArch_neu/login/AOrd_Verz/1/MITGL/' ;
         
-        if (!empty($row['me_bild1'])) {
-            $me_bild1 = $row['me_bild1'];
-            
-            // Absoluter Dateisystempfad zum Bild (für PHP-Funktionen)
-            $filePath = $_SERVER['DOCUMENT_ROOT'].'/FHArch_neu/login/AOrd_Verz/1/MITGL/' . $me_bild1;
-            
-            // Webpfad zum Bild (für HTML src und href)
-            $webPath = '/fharch_neu/login/AOrd_Verz/1/MITGL/' . $me_bild1;
-            
-            // Prüfen, ob die Datei existiert
-            if (is_file($filePath)) {
-                $row['me_bild1'] = "<a href='$webPath' target='Bild 1'>
-                <img src='$webPath' alt='$me_bild1' width='150px'><br>$me_bild1</a>";
-            } else {
-                // Kein Text als URL ausgeben, sondern leer oder Platzhalter
-                $row['me_bild1'] = ''; // oder mit Platzhalterbild
+        // Webpfad zum Bild (für HTML src und href)
+        $webPath = '/fharch_neu/login/AOrd_Verz/1/MITGL/' ;
+        
+        $bild = ['me_bild1', 'me_bild2', 'me_bild3','me_bild4'];
+        foreach ($bild as $name) {
+            if ($row[$name] != "" ) {
+                $bild = $row[$name];
+                $bldFile = $filePath.$bild;
+                if (is_file($bldFile)) {
+                    $row[$name] = "<a href='".$webPath.$bild."' target='$bild'>
+                <img src='".$webPath.$bild."' alt='$bild' width='150px'><br>$bild</a>";
+                } else {
+                    // Kein Text als URL ausgeben, sondern leer oder Platzhalter
+                    $row[$bild] = ''; // oder mit Platzhalterbild
+                }
             }
         }
+        
         
         return true;
     }

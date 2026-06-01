@@ -137,21 +137,26 @@ if ($phase == 1) {
         $neu[$name] = $value;
     }
     
-    
-   # $uploaddir = $path2ROOT . "login/AOrd_Verz/1/MITGL/";
-    #$webPath = $_SESSION['BS_Prim']['Env']['basePath'] . 
-    $uploaddir = $_SESSION['BS_Prim']['Env']['basePath'] . "/login/AOrd_Verz/1/MITGL/";
-    
+    #var_dump($neu);
+    #var_dump($_FILES);
+ 
+    # $uploaddir = $_SESSION['BS_Prim']['Env']['basePath'] . "/login/AOrd_Verz/1/MITGL/";
+    $uploaddir = $path2ROOT . "login/AOrd_Verz/1/MITGL/";
+    echo __FILE__ . " " . __LINE__ . " uplDir $uploaddir <br>";
     if (! file_exists($uploaddir)) {
         mkdir($uploaddir, 0777, true);
     }
     
+    if (empty($neu['me_eh_datum']) ) {
+        $neu['me_eh_datum'] = convertInternationalDateToSql( $neu['me_eh_datum'], false);
+    }
+    
     $target1 = "";
-    if (! empty($_FILES['uploaddatei_01'])) {
-        $pict1 = basename($_FILES['uploaddatei_01']['name']);
+    if (! empty($_FILES['f_Name_01'])) {
+        $pict1 = basename($_FILES['f_Name_01']['name']);
         if (! empty($pict1)) {
-            $target1 = $uploaddir . basename($_FILES['uploaddatei_01']['name']);
-            if (move_uploaded_file($_FILES['uploaddatei_01']['tmp_name'], $target1)) {
+            $target1 = $uploaddir . basename($_FILES['f_Name_01']['name']);
+            if (move_uploaded_file($_FILES['f_Name_01']['tmp_name'], $target1)) {
                 echo "Datei/Bild 1 geladen!<br><br><br>";
                 $neu['me_bild1'] = $pict1;
             }
@@ -159,11 +164,11 @@ if ($phase == 1) {
     }
 
     $target2 = "";
-    if (! empty($_FILES['uploaddatei_02'])) {
-        $pict2 = basename($_FILES['uploaddatei_02']['name']);
+    if (! empty($_FILES['f_Name_02'])) {
+        $pict2 = basename($_FILES['f_Name_02']['name']);
         if (! empty($pict2)) {
-            $target2 = $uploaddir . basename($_FILES['uploaddatei_02']['name']);
-            if (move_uploaded_file($_FILES['uploaddatei_02']['tmp_name'], $target2)) {
+            $target2 = $uploaddir . basename($_FILES['f_Name_02']['name']);
+            if (move_uploaded_file($_FILES['f_Name_02']['tmp_name'], $target2)) {
                 echo "Datei/Bild 2 geladen!<br><br><br>";
                 $neu['me_bild2'] = $pict2;
             }
@@ -171,11 +176,11 @@ if ($phase == 1) {
     }
 
     $target3 = "";
-    if (! empty($_FILES['uploaddatei_03'])) {
-        $pict3 = basename($_FILES['uploaddatei_03']['name']);
+    if (! empty($_FILES['f_Name_03'])) {
+        $pict3 = basename($_FILES['f_Name_03']['name']);
         if (! empty($pict3)) {
-            $target3 = $uploaddir . basename($_FILES['uploaddatei_03']['name']);
-            if (move_uploaded_file($_FILES['uploaddatei_03']['tmp_name'], $target3)) {
+            $target3 = $uploaddir . basename($_FILES['f_Name_03']['name']);
+            if (move_uploaded_file($_FILES['f_Name_03']['tmp_name'], $target3)) {
                 echo "Datei/Bild 3 geladen!<br><br><br>";
                 $neu['me_bild3'] = $pict3;
             }
@@ -183,17 +188,17 @@ if ($phase == 1) {
     }
 
     $target4 = "";
-    if (! empty($_FILES['uploaddatei_04'])) {
-        $pict4 = basename($_FILES['uploaddatei_04']['name']);
+    if (! empty($_FILES['f_Name_04'])) {
+        $pict4 = basename($_FILES['f_Name_04']['name']);
         if (! empty($pict4)) {
-            $target4 = $uploaddir . basename($_FILES['uploaddatei_04']['name']);
-            if (move_uploaded_file($_FILES['uploaddatei_04']['tmp_name'], $target4)) {
+            $target4 = $uploaddir . basename($_FILES['f_Name_04']['name']);
+            if (move_uploaded_file($_FILES['f_Name_04']['tmp_name'], $target4)) {
                 echo "Datei/Bild 4 geladen!<br><br><br>";
                 $neu['me_bild4'] = $pict4;
             }
         }
     }
-
+    #  var_dump($neu);
     unset($neu['MAX_FILE_SIZE']);
     unset($neu['phase']);
     
@@ -217,11 +222,25 @@ if ($phase == 1) {
         }
 
     }
-    if ($sub_mod = 'ehrg') {
-        header("Location: MitglEdit.php?ID=$mi_id");
+    $target = "";
+    if ($sub_mod == 'Ehrg') {
+        $target = "MitglEdit.php?ID=" . urlencode($mi_id);
     } else {
-        header("Location: MitglEhrgList.php");
+        $target = "MitglEhrgList.php";
     }
+    
+    echo "Die Daten wurden gespeichert.<br>";
+    echo "Sie werden gleich zurückgeleitet.";
+   
+    echo "<script>
+             let target = " . json_encode($target) . ";
+       console.log ('Rücksprung  ', target);
+             setTimeout(function() {
+             window.location.href = target;
+            }, 2000); // 5 Sekunden warten
+         </script>";
+    exit;
+   
 }
 
 switch ($phase) {

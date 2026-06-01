@@ -238,6 +238,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const table = new Tabulator("#" + listName + "-table", {
         // use mi_id as row index when present; this allows getRow(mi_id) to work reliably
         index: "mi_id",
+        responsiveLayout: true,
         ajaxRequestFunc: function(url, config, params) {
             // Get the latest value of cust_ID input
             const customValue = document.getElementById('cust_ID')?.value || "";

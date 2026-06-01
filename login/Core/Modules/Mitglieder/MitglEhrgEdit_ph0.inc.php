@@ -10,7 +10,7 @@ use Fharch\Core\Services\FormRendererFlex;
  *
  */
 
-#var_dump($neu);
+# var_dump($neu);
 if ($debug) {
     echo "<pre class=debug>MitglEhrgEdit_ph0.inc.php ist gestarted</pre>";
 }
@@ -53,7 +53,7 @@ echo "<input type='hidden' name='me_bild2' value='" . $neu['me_bild2'] . "'>";
 echo "<input type='hidden' name='me_bild3' value='" . $neu['me_bild3'] . "'>";
 echo "<input type='hidden' name='me_bild4' value='" . $neu['me_bild4'] . "'>";
 
-$pict_path = "AOrd_Verz/1/MITGL/";
+$pict_path = $path2ROOT. "login/AOrd_Verz/1/MITGL/";
 
 $Feldlaenge = "150px";
 

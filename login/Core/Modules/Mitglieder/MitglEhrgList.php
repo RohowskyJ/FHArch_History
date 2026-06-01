@@ -2,7 +2,7 @@
 <?php
 # session_start();
 /**
- * Mitglieder Verwaltung Liste
+ * Mitglieder Ehrungs- Liste
  * 
  * @author Josef Rohowsky - neu 2020 - Umstellung Klassen/PDO, Module 2026
  * 
@@ -24,13 +24,13 @@ register_shutdown_function(function() {
 $module = 'ADM-List';
 $sub_mod = "LIST";
 
-$Zugr = "ADM-MI";
+$Zugr = "ADM-MIE";
 
-$tabelle = 'fv_mitglieder';// <?php
+$tabelle = 'fv_mi_ehrung';// <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ini_set('log_errors', '1');
-ini_set('error_log', __DIR__ . '/MitglList_php-error.log.txt');
+ini_set('error_log', __DIR__ . '/MI_MitglEhrungsList_php-error.log.txt');
 # var_dump($_SERVER);
 
 /**
@@ -50,7 +50,6 @@ require $path2ROOT . 'login/Core/Services/FuncsLib.php';
 require $path2ROOT . 'login/Core/Services/CommFuncsLib.php';
 require $path2ROOT . 'login/Core/Services/ConstLib.php';
 
-require $path2ROOT . 'vendor/autoload.php';
 
 use Fharch\Core\Database\DB_GenericLog;
 use Fharch\Core\Auth\Auth; 
@@ -97,10 +96,10 @@ if ($phase == 99) {
 # Definition der Auswahlmöglichkeiten (mittels radio Buttons)
 # ===========================================================================================
 echo "<input type='hidden' id='srch_Id' value=''>";
-$list_ID = 'MI';
-$lTitel = ["Alle" => "Alle Mitglieder", "Mitgl" => "Aktive Mitglieder",
-    "nMitgl" => "Nicht- Aktive Mitgliedert",
-    "Adrlist" => "Adressliste"];
+$list_ID = 'MIE';
+$lTitel = ["Mitgl" => "Alle Ehrungen"];
+
+$proj = 'Alle';
 
 if (isset($_GET['mod_t_id'])) {
     $mod_t_id = $_GET['mod_t_id'];
