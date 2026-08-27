@@ -1,6 +1,6 @@
 # Logs
 *.log
-data/Aord_verz/Logging/*.log.*
+data/Aord_verz/Logging/*.log
 
 # Vendor
 vendor/
@@ -23,23 +23,3 @@ tests/coverage/
 # Temp
 tmp/
 cache/
-
-# Fotos
-*.jpg
-*.JPG
-*.jpeg
-*.JPEG
-*.png
-*.PNG
-*.tif
-*.TIF
-*.doc
-*.DOC
-*.pdf
-*.xls
-*.lnk
-*.zip
-*.msg
-*.bmp
-*.odt
-*.mid
