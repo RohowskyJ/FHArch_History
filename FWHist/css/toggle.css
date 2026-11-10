@@ -1,0 +1,3 @@
+/* css für toggle Display */
+.toggle-block { display: none; }
+.toggle-block.visible { display: block; }

@@ -1,0 +1,29 @@
+.tabulator {
+    border: 1px solid #ddd4c5;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabulator .tabulator-header {
+    background: #f3ebdf;
+    border-bottom: 1px solid #ddd4c5;
+}
+
+.tabulator .tabulator-header .tabulator-col {
+    background: transparent;
+    font-weight: 700;
+}
+
+.tabulator-row .tabulator-cell {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tabulator-footer-custom {
+    padding: 10px 12px;
+    border-top: 1px solid #ddd4c5;
+    background: #fcfaf6;
+    color: #675f55;
+    font-size: .92rem;
+    font-weight: 600;
+}

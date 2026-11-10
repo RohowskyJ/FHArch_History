@@ -1,0 +1,64 @@
+ /** css for FORM */
+  .form{
+      display: grid;
+      gap: 12px;
+    }
+    .field{
+      display: grid;
+      gap: 6px;
+    }
+    label{
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    input[type="search"],
+    select,
+    textarea{
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 12px 26px rgba(27,26,23,.06);
+      font: inherit;
+      color: var(--ink);
+      outline: none;
+      transition: box-shadow .18s ease, border-color .18s ease, transform .18s ease;
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(31,58,91,.35);
+      box-shadow: 0 16px 34px rgba(31,58,91,.12);
+    }
+
+    .help{
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .notice{
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px dashed rgba(138,31,31,.35);
+      background: rgba(138,31,31,.06);
+      color: #3a1a1a;
+      font-size: 13.5px;
+      line-height: 1.45;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+      margin-top: 6px;
+    }

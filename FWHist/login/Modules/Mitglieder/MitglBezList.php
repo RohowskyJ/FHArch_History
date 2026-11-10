@@ -1,0 +1,167 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Mitglieder-Beitragsverwaltung
+ */
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Prüfen, ob Session gültig ist
+if (empty($_SESSION['BS_Prim'])) {
+    // Session ungültig → Weiterleitung auf externe URL
+    if ($_SERVER['HTTP_HOST'] == 'localhost') {
+        header('Location: /localhost/Feuerwehr_Archiv/FWHist/');
+        exit;
+    }
+    header('Location: https://www.feuerwehrhistoriker.at/FWHist/');
+    exit;
+}
+
+$systemBasePath = $_SESSION['BS_Prim']['RoBase'] ?? dirname(__DIR__, 3) . DIRECTORY_SEPARATOR;
+require $systemBasePath . 'vendor/autoload.php';
+
+use FWHist\Core\EnvSessionManager;
+use FWHist\Auth\AccessGuard;
+use FWHist\Database\DB_GenericLog;
+use FWHist\Services\HTMLPage;
+
+// Shutdown-Funktion direkt am Anfang registrieren
+register_shutdown_function(function() {
+    $error = error_get_last();
+    if ($error !== null) {
+        $message = "Shutdown error detected:\n" . print_r($error, true);
+        error_log($message);
+        // Optional: auch in eine separate Datei schreiben
+        file_put_contents(__DIR__ . '/MIB_fatal_error.log', $message, FILE_APPEND);
+    }
+});
+    
+
+$module = 'ADM-MI';
+$sub_mod = "Bez";
+
+$tabelle = 'mi_mitglieder';
+
+error_reporting(E_ALL);
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
+ini_set('error_log', __DIR__ . '/MIB_List_php-error.log.txt');
+
+$debug = False; // Debug output Ein/Aus Schalter
+
+require $systemBasePath . 'login/Services/FuncsLib.php';
+require $systemBasePath . 'login/Services/CommFuncsLib.php';
+require $systemBasePath . 'login/Services/ConstLib.php';
+
+$guard = AccessGuard::fromSession(new DB_GenericLog());
+$canRead = $guard->canReadMemberPaymentData();
+if (!$canRead) {
+    http_response_code(403);
+    exit('Für diesen Programmteil besteht keine Berechtigung.');
+}
+$paymentCsrfToken = AccessGuard::csrfToken();
+
+$debug = False; // Debug output Ein/Aus Schalter
+
+$envManager = new EnvSessionManager();
+$basePath = $envManager->getEnv('basePath');
+$configFileS = $envManager->getEnv('configFileS');
+$page = new HTMLPage(
+    'Mitgliedsbeiträge',
+    $systemBasePath,
+    $basePath,
+    [
+        'headExtras' => '',
+        'type' => 'Form',
+        'width' => '130em',
+    ]
+);
+
+$page->loadConfig($configFileS);
+$page->renderHeader();
+
+$lists = [
+    [
+        'id' => 'MIB',
+        'container' => 'MIB-table',
+        'apiUrl' => $basePath . '/FWHist/login/Services/API/ListHostAPI.php',
+        'title' => 'Mitgliedsbeiträge',
+        'editScript' => '',
+        'newLabel' => '',
+        'showActionColumn' => false,
+        'indexField' => 'mi_id',
+        'filterSelectFields' => ['mi_mtyp', 'mi_payment_status'],
+        'filterTextFields' => ['mi_name', 'mi_id'],
+        'paginationSizes' => [10, 25, 50, 100],
+    ],
+];
+
+$globalParams = [
+    'owner' => 'Mitglieder-Beitragsverwaltung',
+    'user' => $_SESSION['BS_Prim']['BE']['be_id'] ?? null,
+    'project' => null,
+    'sel_id' => null,
+    'edit_Protect' => false,
+];
+
+?>
+
+<script>
+const lists = <?= json_encode($lists, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;
+const globalParams = <?= json_encode($globalParams, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;
+globalThis.lists = lists;
+globalThis.globalParams = globalParams;
+globalThis.paymentCsrfToken = <?= json_encode($paymentCsrfToken, JSON_UNESCAPED_SLASHES) ?>;
+globalThis.listTableFormatters = {
+    paymentFormatter: function(cell) {
+        const value = cell.getValue();
+        const row = cell.getRow().getData();
+        const field = cell.getField();
+        const currentYear = new Date().getFullYear();
+        const year = field.endsWith('_1')
+            ? currentYear - 1
+            : (field.endsWith('_p') ? currentYear + 1 : currentYear);
+        const attrs = `data-mi_id="${Number(row.mi_id) || 0}" data-field="${field}" data-year="${year}" data-user_id="${Number(globalParams.user) || 1}"`;
+
+        if (value === 'paid') {
+            return "<b style='color:green;font-size:130%;'>&checkmark;</b>";
+        }
+        if (value === 'unpaid') {
+            return `<a href="#" ${attrs} class="pay-link" style="color:blue;font-weight:bold;" title="Zahlung verbuchen">&euro;</a>`;
+        }
+        if (value === 'notpaid') {
+            return `<a href="#" ${attrs} class="pay-link" style="color:red;font-weight:bold;" title="Unbezahlt">&#10060;</a>`;
+        }
+        return value || '';
+    },
+    korrekturFormatter: function(cell) {
+        const row = cell.getRow().getData();
+        if (!row.justUpdated || !row.lastPaymentField) {
+            return '';
+        }
+        const field = String(row.lastPaymentField);
+        const currentYear = new Date().getFullYear();
+        const year = field.endsWith('_1')
+            ? currentYear - 1
+            : (field.endsWith('_p') ? currentYear + 1 : currentYear);
+        return `<a href="#" class="cancel-link" data-mi_id="${Number(row.mi_id) || 0}" data-field="${field}" data-year="${year}" data-user_id="${Number(globalParams.user) || 1}" style="color:orange;text-decoration:underline;" title="Zahlung stornieren">Korr</a>`;
+    },
+};
+</script>
+
+<div id="root-MIB">
+    <h2>Mitgliedsbeiträge</h2>
+    <div id="MIB-table"></div>
+</div>
+
+<script src="<?= $basePath ?>/FWHist/js/tabulator-6.5.2/tabulator.min.js"></script>
+<script src="<?= $basePath ?>/FWHist/login/Modules/Mitglieder/javascript/MIB_Payment.js"></script>
+<script src="<?= $basePath ?>/FWHist/js/list-tables.js"></script>
+
+<?php
+$page->renderFooter();
+?>
