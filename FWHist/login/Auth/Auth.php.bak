@@ -1,0 +1,332 @@
+<?php
+declare(strict_types=1);
+
+namespace FWHist\Auth;
+
+use FWHist\Database\DB_GenericLog;
+use RuntimeException;
+use InvalidArgumentException;
+
+final class Auth
+{
+    private ?array $user = null; // aktuell eingeloggter Benutzer-Datensatz
+    private ?array $roles = null; // Array von Rollen (fl_modules) des Benutzers
+    private array $mandanten = []; // ei_id-Liste, für die der Benutzer als ONU-ALL schreiben darf
+    
+    public function __construct(private DB_GenericLog $pdo)
+    {
+    }
+    
+    /**
+     * Versucht Benutzer mit User-ID und Passwort anzumelden.
+     * Prüft Passwort-Hash (bcrypt).
+     * @throws RuntimeException bei Fehler
+     */
+    public function login(string $userId, string $password): bool
+    {
+
+        // Benutzer laden (aktiv)
+        $user = $this->pdo->fetchOne(
+            'SELECT * FROM fv_benutzer WHERE be_uid = :uid AND be_act <> "i"',
+            ['uid' => $userId]
+            );
+
+        if (!$user) {
+            return false; // Benutzer nicht gefunden oder inaktiv
+        }
+        
+        // Passwort-Hash aus fv_erlauben laden
+        $authData = $this->pdo->fetchOne(
+            'SELECT fe_pw FROM fv_erlauben WHERE be_id = :be_id',
+            ['be_id' => $user['be_id']]
+            );
+  
+        
+        if (!$authData || !isset($authData['fe_pw'])) {
+            return false; // Kein Passwort gesetzt
+        }
+        
+        $hash = $authData['fe_pw'];
+
+        if (!password_verify($password, $hash)) {
+           return false; // Passwort falsch
+        }
+        
+        // Optional: Passwort-Rehash prüfen und ggf. aktualisieren
+        if (password_needs_rehash($hash, PASSWORD_DEFAULT)) {
+            $newHash = password_hash($password, PASSWORD_DEFAULT);
+            $this->pdo->query(
+                'UPDATE fv_erlauben SET fe_pw = :pw WHERE be_id = :be_id',
+                ['pw' => $newHash, 'be_id' => $user['be_id']]
+                );
+        }
+        
+        // Benutzer und Rollen laden
+        $this->user = $user;
+        $this->loadRoles();
+        $this->loadMandanten();
+
+        return true;
+    }
+    
+    /**
+     * Benutzer-Logout (Session löschen)
+     */
+    public function logout(): void
+    {
+        $this->user = null;
+        $this->roles = null;
+        $this->mandanten = [];
+        // Session-Handling hier oder in Controller
+    }
+    
+    /**
+     * Gibt den aktuell eingeloggten Benutzer zurück oder null
+     * @return array<string,mixed>|null
+     */
+    public function getUser(): ?array
+    {
+        return $this->user;
+    }
+    
+    /**
+     * Prüft, ob ein Benutzer eingeloggt ist
+     */
+    public function isLoggedIn(): bool
+    {
+        return $this->user !== null;
+    }
+    
+    /**
+     * Lädt die Rollen des aktuell eingeloggten Benutzers
+     */
+    private function loadRoles(): void
+    {
+        if (!$this->user) {
+            $this->roles = [];
+            return;
+        }
+        
+        $rows = $this->pdo->fetchAll(
+            'SELECT r.fl_modules FROM fv_rolle ro
+             JOIN fv_rollen_beschr r ON ro.fl_id = r.fl_id
+             WHERE ro.be_id = :be_id AND ro.fr_aktiv = "a"',
+            ['be_id' => $this->user['be_id']]
+            );
+        
+        $modules = [];
+        foreach ($rows as $row) {
+            // fl_modules ist ein Komma-getrennter String von Berechtigungen
+            $parts = array_map('trim', explode(',', $row['fl_modules']));
+            $modules = array_merge($modules, $parts);
+        }
+        
+        // Duplikate entfernen
+        $this->roles = array_values(array_unique(array_filter($modules, static fn(string $m): bool => $m !== '')));
+    }
+    
+    /**
+     * Lädt die Mandanten (ei_id), für die der Benutzer Mandantendaten schreiben darf
+     * (nur relevant für ONU-ALL; Tabelle fv_benutzer_mandant, aktive Zeilen fm_aktiv = 'a').
+     * Fehler (z. B. Tabelle fehlt) führen zu "keine Mandanten", nie zu einem Abbruch oder zu mehr Rechten.
+     */
+    private function loadMandanten(): void
+    {
+        $this->mandanten = [];
+        if (!$this->user) {
+            return;
+        }
+
+        try {
+            $rows = $this->pdo->fetchAll(
+                'SELECT ei_id FROM fv_benutzer_mandant WHERE be_id = :be_id AND fm_aktiv = "a"',
+                ['be_id' => $this->user['be_id']]
+                );
+        } catch (\Throwable $e) {
+            error_log('Auth::loadMandanten: ' . $e->getMessage());
+            return;
+        }
+
+        $this->mandanten = array_values(array_unique(
+            array_map(static fn(array $r): int => (int) $r['ei_id'], $rows)
+            ));
+    }
+
+    /**
+     * Stellt den Benutzer in Folgerequests aus der Session-be_id wieder her
+     * (Rollen und Mandanten werden frisch aus der DB geladen, Entzug wirkt sofort).
+     */
+    public function restore(int $beId): bool
+    {
+        $user = $this->pdo->fetchOne(
+            'SELECT * FROM fv_benutzer WHERE be_id = :be_id AND be_act <> "i"',
+            ['be_id' => $beId]
+            );
+
+        if (!$user) {
+            $this->logout();
+            return false;
+        }
+
+        $this->user = $user;
+        $this->loadRoles();
+        $this->loadMandanten();
+
+        return true;
+    }
+
+    /**
+     * Prüft eine Berechtigung. ADM-ALLE (Super-Admin) erfüllt jede Prüfung.
+     * Beispiel: $auth->hasPermission('ADM-MI')
+     */
+    public function hasPermission(string $permission): bool
+    {
+        if (!$this->isLoggedIn()) {
+            return false;
+        }
+
+        $roles = $this->roles ?? [];
+
+        return in_array('ADM-ALLE', $roles, true) || in_array($permission, $roles, true);
+    }
+
+    /**
+     * Prüft eine Rolle exakt, ohne Super-Admin-Abkürzung (z. B. ONU-ALL).
+     */
+    public function hasRole(string $role): bool
+    {
+        return $this->isLoggedIn() && in_array($role, $this->roles ?? [], true);
+    }
+
+    /**
+     * Darf der Benutzer als ONU-ALL für diesen Mandanten schreiben?
+     */
+    public function hasMandant(int $eiId): bool
+    {
+        return $this->isLoggedIn() && in_array($eiId, $this->mandanten, true);
+    }
+
+    /**
+     * Gibt die Rollen des eingeloggten Benutzers zurück (leer, wenn nicht eingeloggt).
+     * @return string[]
+     */
+    public function getRoles(): array
+    {
+        return $this->isLoggedIn() ? ($this->roles ?? []) : [];
+    }
+
+    /**
+     * @return int[]
+     */
+    public function getMandanten(): array
+    {
+        return $this->isLoggedIn() ? $this->mandanten : [];
+    }
+    
+    /**
+     * Passwort ändern (aktuelles Passwort prüfen)
+     * @throws RuntimeException bei Fehler
+     */
+    public function changePassword(string $currentPassword, string $newPassword): bool
+    {
+        if (!$this->isLoggedIn()) {
+            throw new RuntimeException('Nicht eingeloggt');
+        }
+        if (strlen($newPassword) < 8) {
+            throw new InvalidArgumentException('Das neue Passwort muss mindestens 8 Zeichen lang sein.');
+        }
+        
+        // Aktuelles Passwort prüfen
+        $authData = $this->pdo->fetchOne(
+            'SELECT fe_pw FROM fv_erlauben WHERE be_id = :be_id',
+            ['be_id' => $this->user['be_id']]
+            );
+        
+        if (!$authData || !password_verify($currentPassword, $authData['fe_pw'])) {
+            throw new RuntimeException('Aktuelles Passwort ist falsch');
+        }
+        
+        // Neues Passwort hashen und speichern
+        $newHash = password_hash($newPassword, PASSWORD_DEFAULT);
+        $this->pdo->query(
+            'UPDATE fv_erlauben
+             SET fe_pw = :new_password_hash,
+                 fe_pw_chgd_id = :password_changed_by,
+                 fe_pw_chgd_at = NOW(),
+                 fe_changed_id = :record_changed_by,
+                 fe_changed_at = NOW()
+             WHERE be_id = :target_user_id',
+            [
+                'new_password_hash' => $newHash,
+                'password_changed_by' => $this->user['be_id'],
+                'record_changed_by' => $this->user['be_id'],
+                'target_user_id' => $this->user['be_id'],
+            ]
+            );
+        
+        return true;
+    }
+    
+    /**
+     * Passwort-Reset Token erzeugen und speichern (für Mailversand)
+     */
+    public function createPasswordResetToken(int $beId, string $token, \DateTimeInterface $expires): void
+    {
+        // pw_used = 0, pw_expires = $expires
+        $this->pdo->query(
+            'INSERT INTO fv_password_resets (be_id, token, pw_expires, pw_used, pw_created) VALUES (:be_id, :token, :expires, 0, NOW())',
+            [
+                'be_id' => $beId,
+                'token' => $token,
+                'expires' => $expires->format('Y-m-d H:i:s'),
+            ]
+            );
+    }
+    
+    /**
+     * Passwort-Reset Token validieren und Benutzer-ID zurückgeben
+     */
+    public function validatePasswordResetToken(string $token): ?int
+    {
+        $row = $this->pdo->fetchOne(
+            'SELECT be_id FROM fv_password_resets WHERE token = :token AND pw_used = 0 AND pw_expires > NOW()',
+            ['token' => $token]
+            );
+        
+        return $row['be_id'] ?? null;
+    }
+    
+    /**
+     * Passwort-Reset Token als benutzt markieren
+     */
+    public function markPasswordResetTokenUsed(string $token): void
+    {
+        $this->pdo->query(
+            'UPDATE fv_password_resets SET pw_used = 1 WHERE token = :token',
+            ['token' => $token]
+            );
+    }
+}
+/*
+2. Beispiel: Nutzung in Menü-Rendering
+<?php
+// Beispiel: Menü-Rendering mit Berechtigungsabfrage
+*/
+/** @var \FWHist\Core\Auth\Auth $auth */
+/*
+if ($auth->isLoggedIn()) {
+    echo '<ul>';
+    
+    if ($auth->hasPermission('ADM-MI')) {
+        echo '<li><a href="/mitgliederverwaltung">Mitgliederverwaltung</a></li>';
+    }
+    
+    if ($auth->hasPermission('ADM-MB')) {
+        echo '<li><a href="/beitragszahlung">Beitrags-Bezahleingang</a></li>';
+    }
+    
+    echo '</ul>';
+} else {
+    echo '<p>Bitte einloggen, um das Menü zu sehen.</p>';
+}
+*/

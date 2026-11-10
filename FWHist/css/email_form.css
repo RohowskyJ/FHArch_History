@@ -1,0 +1,68 @@
+     /** CSS für E-Mail- Form */
+     
+     body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0; padding: 20px; color: #333;
+        }
+        h1 {
+            text-align: center; color: #2c3e50; margin-bottom: 30px;
+        }
+        form {
+            max-width: 600px; margin: 0 auto;
+            background: #fff; padding: 25px 30px;
+            border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        fieldset {
+            border: none; padding: 0; margin: 0;
+        }
+        legend {
+            font-size: 1.4em; font-weight: 600; margin-bottom: 15px; color: #34495e;
+        }
+        label {
+            display: block; margin-bottom: 6px; font-weight: 600; color: #34495e;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%; padding: 10px 12px; margin-bottom: 10px;
+            border: 1px solid #ccc; border-radius: 5px; font-size: 1em;
+            transition: border-color 0.3s ease; box-sizing: border-box; resize: vertical;
+        }
+        input[type="text"]:read-only {
+            background-color: #f0f0f0; color: #555; cursor: default;
+        }
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #2980b9; outline: none;
+            box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+        }
+        textarea {
+            min-height: 140px; font-family: inherit;
+        }
+        button {
+            background-color: #2980b9; color: white; border: none;
+            padding: 12px 25px; font-size: 1.1em; border-radius: 5px;
+            cursor: pointer; transition: background-color 0.3s ease;
+            display: block; margin: 0 auto; width: 100%; max-width: 200px;
+        }
+        button:hover,
+        button:focus {
+            background-color: #1c5980; outline: none;
+        }
+        .error {
+            border-color: #e74c3c !important;
+            background-color: #fdecea;
+        }
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.9em;
+            margin-top: -8px;
+            margin-bottom: 12px;
+        }
+        @media (max-width: 640px) {
+            form { padding: 20px; }
+        }
+     
+     
+        

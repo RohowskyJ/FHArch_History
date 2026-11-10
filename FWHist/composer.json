@@ -1,0 +1,30 @@
+{
+     "name" : "fwhist/fwhist",
+     "description" : "FeuerwehrHistorie- Projekt mit mehreren Modulen",
+     "require" : {
+          "php" : ">=8.2",
+          "ext-pdo" : "*",
+          "phpmailer/phpmailer" : "^7.0",
+          "league/plates" : "^3.6",
+          "monolog/monolog" : "^3.0"
+     },
+     "require-dev" : {
+          "phpunit/phpunit" : "^10"
+     },
+     "autoload" : {
+          "psr-4" : {
+               "FWHist\\":  "login/"
+          }
+     },
+     "autoload-dev" : {
+          "psr-4" : {
+               "Tests\\" : "tests/"
+          }
+     },
+     "scripts" : {
+          "post-install-cmd" : "echo 'Composer install abgeschlossen.'",
+          "post-update-cmd" : "echo 'Composer update abgeschlossen.'"
+     },
+     "minimum-stability" : "beta",
+     "prefer-stable" : true
+}

@@ -1,0 +1,187 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Mitgliederverwaltung, Wartung
+ * 
+ * @author Josef Rohowsky - neu 2020
+ */
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Prüfen, ob Session gültig ist
+if (empty($_SESSION['BS_Prim'])) {
+    // Session ungültig → Weiterleitung auf externe URL
+    if ($_SERVER['HTTP_HOST'] == 'localhost') {
+        header('Location: /localhost/Feuerwehr_Archiv/FWHist/');
+        exit;
+    }
+    header('Location: https://www.feuerwehrhistoriker.at/FWHist/');
+    exit;
+}
+
+# $_SESSION['BS_Prim'] ??= [];
+$systemBasePath = $_SESSION['BS_Prim']['RoBase'] ?? dirname(__DIR__, 3) . DIRECTORY_SEPARATOR;
+
+require_once $systemBasePath . 'vendor/autoload.php';
+
+use FWHist\Core\EnvSessionManager;
+use FWHist\Auth\AccessGuard;
+use FWHist\Database\DB_GenericLog;
+use FWHist\Services\TableColumnMetadata;
+use FWHist\Services\FormRendererFlex;
+use FWHist\Modules\Mitglieder\API\MI_MitgliederModule;
+use FWHist\Services\HTMLPage;
+
+$module = 'MVW';
+$sub_mod = 'all';
+
+// Shutdown-Funktion direkt am Anfang registrieren
+register_shutdown_function(function() {
+    $error = error_get_last();
+    if ($error !== null) {
+        $message = "Shutdown error detected:\n" . print_r($error, true);
+        error_log($message);
+        // Optional: auch in eine separate Datei schreiben
+        file_put_contents(__DIR__ . '/MI_Edit_fatal_error.log', $message, FILE_APPEND);
+    }
+});
+    
+error_reporting(E_ALL);
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
+ini_set('error_log', __DIR__ . '/MI_Edit_php-error.log.txt');
+
+require $systemBasePath . 'login/Services/FuncsLib.php';
+require $systemBasePath . 'login/Services/CommFuncsLib.php';
+require $systemBasePath . 'login/Services/ConstLib.php';
+
+$DBD = new DB_GenericLog();
+$guard = AccessGuard::fromSession($DBD);
+$canEdit = $guard->canWriteMemberData();
+if (!$canEdit) {
+    http_response_code(403);
+    exit('Für diesen Programmteil besteht keine Berechtigung.');
+}
+if ((int) ($_POST['phase'] ?? 0) === 1) {
+    AccessGuard::requireCsrf();
+}
+
+$envManager = new EnvSessionManager();
+$basePath = $envManager->getEnv('basePath')  ;
+$configFileS = $envManager->getEnv('configFileS');
+
+$header = "";
+
+$page = new HTMLPage('Mitglieder- Verwaltung',
+    $systemBasePath,
+    $basePath,
+    ['headExtras' => $header,
+        'type' => 'Form',
+        'width' => '60em',
+    ]
+    );
+
+$page->loadConfig($configFileS);
+$page->renderHeader();
+
+initial_debug('POST','GET'); # Wenn $debug=true - Ausgabe von Debug Informationen: $_POST, $_GET, $_FILES
+
+// ============================================================================================================
+// Eingabenerfassung und defauls
+// ============================================================================================================
+
+#var_dump($DBD);
+$pdo = $DBD->getPDO();
+#var_dump($pdo);
+
+$meta = new TableColumnMetadata($pdo,'fharch_new',false);
+#var_dump($meta);
+
+$columnsByTables = $meta->getColumnsForTables(['mi_mitglieder', 'mi_ehrungen', 'mi_bezahlt' ]);
+#var_dump($columnsByTables);
+# var_dump($meta);
+$mitgl = new MI_MitgliederModule($DBD);
+#var_dump($mitgl);
+#var_dump($_SERVER);
+// ============================================================================================================
+// Eingabenerfassung und defauls Teil 1 - alle POST Werte werden später in array $neu gestelltt
+// ============================================================================================================
+if (isset($_POST['phase'])) {
+    $phase = $_POST['phase'];
+} else {
+    $phase = 0;
+}
+if (isset($_GET['ID'])) {
+    $mi_id = intval($_GET['ID']);
+} else {
+    $mi_id = 0;
+}
+if (isset($_POST['mi_id'])) {
+    $mi_id = intval($_POST['mi_id']);
+}
+if (!$canEdit && $mi_id === 0) {
+    http_response_code(403);
+    exit('Eine Neuanlage ist nicht erlaubt.');
+}
+
+if ($phase == 99) {
+    header('Location: MitglList.php');
+}
+
+# -------------------------------------------------------------------------------------------------------
+# Überschreibe die Werte in array $neu - weitere Modifikationen in Edit_tn_check_v2.php !
+# -------------------------------------------------------------------------------------------------------
+if ($phase == 0) {
+    if ($mi_id == 0) {
+        $neu['mi_id'] = $mi_id;
+        $neu['mi_anrede'] = "Hr.";
+        $neu['mi_mtyp'] = $neu['mi_org_typ'] = $neu['mi_org_name'] = $neu['mi_name'] = $neu['mi_vname'] = $neu['mi_titel'] = "";
+        $neu['mi_n_titel'] = $neu['mi_dgr'] = $neu['mi_gebtag'] = $neu['mi_plz'] = $neu['mi_ort'] = $neu['mi_anschr'] = "";
+        $neu['mi_staat'] = "AT";
+        $neu['staat'] = 'Österreich';
+        $neu['mi_tel_handy'] = $neu['mi_handy'] = $neu['mi_fax'] = $neu['mi_email'] = $neu['mi_email_status'] = $neu['mi_vorst_funct'] = $neu['mi_ref_leit'] = "";
+        $neu['mi_ref_int_2'] = $neu['mi_ref_int_3'] = $neu['mi_ref_int_4'] = "";
+        $neu['mi_sterbdat'] = $neu['mi_beitritt'] = $neu['mi_austrdat'] = $neu['mi_m_beitr'] = $neu['mi_m_abo'] = $neu['mi_m_beitr_bez'] = $neu['mi_m_abo_bez'] = $neu['mi_abo_ausg'] = "";
+        $neu['mi_einv_art'] = $neu['mi_einversterkl'] = $neu['mi_einv_dat'] = $neu['mi_changed_id'] = $neu['mi_changed_at'] = "";
+    } else {
+
+        $neu_0 = $mitgl->getMitgliedById($mi_id);
+        
+        $neu = $neu_0[0];
+        unset($neu_0);
+        
+        $neu['staat_id'] = ''; 
+        $neu['staat'] = ""; //Auslesen!
+        
+        # var_dump($neu);
+        
+        if ($debug) {
+            echo '<pre class=debug>';
+            echo '<hr>$neu: ';
+            var_dump($neu);
+            echo '</pre>';
+        }
+    }
+}
+
+if ($phase == 1) {
+
+    foreach ($_POST as $name => $value) {
+        $neu[$name] = $value;
+    }
+}
+
+switch ($phase) {
+    case 0:
+        require ('MitglEdit_ph0.inc.php');
+        break;
+    case 1:
+        require "MitglEdit_ph1.inc.php";
+        break;
+}
+$page->renderFooter();
+?>

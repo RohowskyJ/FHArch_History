@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Listen-Konfiguration "Gemeinde-Wappen" (OW), verknüpft über fw_id.
+ * Gibt nur den Container-HTML-Block aus und hängt die Konfiguration an
+ * $allLists an - das gemeinsame <script>const lists=...</script> und die
+ * JS-Includes werden zentral in OrtsEdit_ph0_inc.php erzeugt.
+ */
+
+$list_ID = 'FAA';
+
+$NeuRec = "FaAEdit.php?ID=0&proj=$proj";
+$ActionScript = ''; // 'OWAEdit.php?proj=' . $proj;
+$lists = [
+    [
+    'id' => 'FAA',
+    'container' => 'FAA-table',
+    'apiUrl' => $basePath . '/FWHist/login/Services/API/ListHostAPI.php',
+    'title' => 'Dokumenten-Liste',
+    'editScript' => $NeuRec,
+    'actionScript' => $ActionScript,
+    'actionLabel' => 'Bearbeiten',
+    'newLabel' => 'Neuen Datensatz anlegen',
+    'filterSelectFields' => [],
+    'filterTextFields' => [],
+    'paginationSizes' => [5, 10, 25, 50, 100],
+    ]
+];
+
+// Globales Parameter-Array
+$globalParams = [
+    'owner' => $ei_id,
+    'user' => $_SESSION['BS_Prim']['BE']['be_id'],
+    'project' => $neu['fz_id'],
+    'sel_id' => $ei_id ?? null,
+    'edit_Protect' => $editProtect ?? false,
+];
+
+?>
+
+<script>
+globalThis.lists = globalThis.lists || [];
+globalThis.lists.push(...<?= json_encode($lists, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>);
+globalThis.globalParams = <?= json_encode($globalParams, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;
+</script>
+
+<div id="root-FAA">
+    <h3>Dokumenten-Liste</h3>
+    <div id="FAA-table"></div>
+</div>
